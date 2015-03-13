@@ -1,0 +1,1173 @@
+@import url("chrome://ostarget/skin/browser.css");
+
+#full-screen-warning-message {
+  background-color: hsl(0,0%,15%);
+  color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 30px 50px;
+  box-shadow: 0 0 2px white;
+}
+
+#full-screen-warning-container[obscure-browser] {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.full-screen-description {
+  font-size: 150%;
+}
+
+#full-screen-domain-text {
+  font-size: 300%;
+}
+
+.full-screen-approval-button,
+#full-screen-remember-decision {
+  font-size: 120%;
+}
+
+
+/* Responsive Mode */
+
+.browserContainer[responsivemode] {
+  background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
+  padding: 0 20px 20px 20px;
+}
+
+.browserStack[responsivemode] {
+  box-shadow: 0 0 7px black;
+}
+
+.devtools-responsiveui-toolbar {
+  -moz-appearance: none;
+  background: transparent;
+  /* text color is textColor from dark theme, since no theme is applied to
+   * the responsive toolbar.
+   */
+  color: hsl(210,30%,85%);
+  margin: 10px 0;
+  padding: 0;
+  box-shadow: none;
+  border-bottom-width: 0;
+}
+
+.devtools-responsiveui-menulist,
+.devtools-responsiveui-toolbarbutton {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  min-width: 32px;
+  min-height: 22px;
+  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
+  border: 1px solid hsla(210,8%,5%,.45);
+  border-radius: 0;
+  background: linear-gradient(hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
+  box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset, 0 0 0 1px hsla(210,16%,76%,.15) inset, 0 1px 0 hsla(210,16%,76%,.15);
+  margin: 0 3px;
+  color: inherit;
+}
+
+.devtools-responsiveui-toolbarbutton > .toolbarbutton-menubutton-button {
+  -moz-box-orient: horizontal;
+}
+
+.devtools-responsiveui-menulist:-moz-focusring,
+.devtools-responsiveui-toolbarbutton:-moz-focusring {
+  outline: 1px dotted hsla(210,30%,85%,0.7);
+  outline-offset: -4px;
+}
+
+.devtools-responsiveui-toolbarbutton:not([label]) > .toolbarbutton-text {
+  display: none;
+}
+
+.devtools-responsiveui-toolbarbutton:not([checked=true]):hover:active {
+  border-color: hsla(210,8%,5%,.6);
+  background: linear-gradient(hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
+  box-shadow: 0 0 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-menulist[open=true],
+.devtools-responsiveui-toolbarbutton[open=true],
+.devtools-responsiveui-toolbarbutton[checked=true] {
+  border-color: hsla(210,8%,5%,.6) !important;
+  background: linear-gradient(hsla(220,6%,10%,.6), hsla(210,11%,18%,.45) 75%, hsla(210,11%,30%,.4));
+  box-shadow: 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true] {
+  color: hsl(208,100%,60%);
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true]:hover {
+  background-color: transparent !important;
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true]:hover:active {
+  background-color: hsla(210,8%,5%,.2) !important;
+}
+
+.devtools-responsiveui-menulist > .menulist-label-box {
+  text-align: center;
+}
+
+.devtools-responsiveui-menulist > .menulist-dropmarker {
+  -moz-appearance: none;
+  display: -moz-box;
+  background-color: transparent;
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+  -moz-box-align: center;
+  border-width: 0;
+  min-width: 16px;
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-button {
+  -moz-appearance: none;
+  color: inherit;
+  border-width: 0;
+  -moz-border-end: 1px solid hsla(210,8%,5%,.45);
+  box-shadow: -1px 0 0 hsla(210,16%,76%,.15) inset, 1px 0 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button]:-moz-locale-dir(rtl) > .toolbarbutton-menubutton-button {
+  box-shadow: 1px 0 0 hsla(210,16%,76%,.15) inset, -1px 0 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button] {
+  padding: 0 1px;
+  -moz-box-align: stretch;
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu] > .toolbarbutton-menu-dropmarker,
+.devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-dropmarker {
+  -moz-appearance: none !important;
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+  -moz-box-align: center;
+  padding: 0 3px;
+}
+
+.devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
+.devtools-responsiveui-toolbar:-moz-locale-dir(rtl) > *:last-child {
+  margin-left: 0;
+}
+
+.devtools-responsiveui-close {
+  list-style-image: url("chrome://browser/skin/devtools/close.png");
+}
+
+.devtools-responsiveui-rotate {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate.png");
+}
+
+.devtools-responsiveui-touch {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch.png");
+  -moz-image-region: rect(0px,16px,16px,0px);
+}
+
+.devtools-responsiveui-touch[checked] {
+  -moz-image-region: rect(0px,32px,16px,16px);
+}
+
+.devtools-responsiveui-screenshot {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot.png");
+}
+
+.devtools-responsiveui-resizebarV {
+  width: 7px;
+  height: 24px;
+  cursor: ew-resize;
+  transform: translate(12px, -12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
+}
+
+.devtools-responsiveui-resizebarH {
+  width: 24px;
+  height: 7px;
+  cursor: ns-resize;
+  transform: translate(-12px, 12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-horizontal-resizer.png");
+}
+
+.devtools-responsiveui-resizehandle {
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+  transform: translate(12px, 12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
+}
+
+/* Highlighter */
+
+.highlighter-outline {
+  box-shadow: 0 0 0 1px black;
+  outline: 1px dashed white;
+  outline-offset: -1px;
+}
+
+.highlighter-outline[locked]  {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+  outline-color: rgba(255,255,255,0.7);
+}
+
+/* Highlighter - Node Infobar */
+
+.highlighter-nodeinfobar {
+  color: hsl(216,33%,97%);
+  border-radius: 3px;
+  background: hsl(214,13%,24%) no-repeat padding-box;
+}
+
+/* Highlighter - Node Infobar - text */
+
+.highlighter-nodeinfobar-text {
+  /* 100% - size of the buttons and margins */
+  max-width: calc(100% - 2 * (26px + 6px));
+  padding-bottom: 1px;
+}
+
+html|*.highlighter-nodeinfobar-tagname {
+  color: hsl(285,100%,75%);
+}
+
+html|*.highlighter-nodeinfobar-id {
+  color: hsl(103,46%,54%);
+}
+
+html|*.highlighter-nodeinfobar-classes,
+html|*.highlighter-nodeinfobar-pseudo-classes {
+  color: hsl(200,74%,57%);
+}
+
+/* Highlighter - Node Infobar - buttons */
+
+.highlighter-nodeinfobar-button {
+  -moz-appearance: none;
+  border-width: 0;
+  padding: 0;
+  width: 26px;
+  min-height: 26px;
+  background-color: transparent;
+}
+
+.highlighter-nodeinfobar-inspectbutton {
+  -moz-border-end: 1px solid #5a6169;
+  -moz-margin-end: 12px;
+  list-style-image: url("chrome://browser/skin/devtools/inspect-button.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+.highlighter-nodeinfobar-inspectbutton:active:hover,
+.highlighter-nodeinfobar-container:not([locked]) >  .highlighter-nodeinfobar >  .highlighter-nodeinfobar-inspectbutton {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+.highlighter-nodeinfobar-menu {
+  -moz-border-start: 1px solid #5a6169;
+  -moz-margin-start: 12px;
+}
+
+.highlighter-nodeinfobar-menu > .toolbarbutton-menu-dropmarker {
+  -moz-appearance: none !important;
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+  -moz-box-align: center;
+  -moz-margin-start: -1px;
+}
+
+/* Highlighter - Node Infobar - box & arrow */
+
+.highlighter-nodeinfobar-arrow {
+  width: 14px;
+  height: 14px;
+  -moz-margin-start: calc(50% - 7px);
+  transform: rotate(-45deg);
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+}
+
+.highlighter-nodeinfobar-arrow-top {
+  margin-bottom: -8px;
+  margin-top: 8px;
+  background-image: linear-gradient(to top right, transparent 50%, hsl(210,2%,22%) 50%);
+}
+
+.highlighter-nodeinfobar-arrow-bottom {
+  margin-top: -8px;
+  margin-bottom: 8px;
+  background-image: linear-gradient(to bottom left, transparent 50%, hsl(210,2%,22%) 50%);
+}
+
+.highlighter-nodeinfobar-container[hide-arrow] > .highlighter-nodeinfobar {
+  margin: 7px 0;
+}
+
+/* Developer toolbar */
+
+#developer-toolbar {
+  -moz-appearance: none;
+  padding: 0;
+  min-height: 32px;
+  background-image: url(devtools/background-noise-toolbar.png), linear-gradient(#303840, #2d3640);
+  border-top: 1px solid #060a0d;
+  box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(206,37%,4%,.1) inset;
+}
+
+#developer-toolbar > toolbarbutton {
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0 10px;
+  width: 32px;
+}
+
+.developer-toolbar-button > image {
+  margin: auto 10px;
+}
+
+#developer-toolbar-toolbox-button {
+  list-style-image: url("chrome://browser/skin/devtools/toggle-tools.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#developer-toolbar-toolbox-button > label {
+  display: none;
+}
+
+#developer-toolbar-toolbox-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#developer-toolbar-toolbox-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+#developer-toolbar-toolbox-button[checked=true] {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+#developer-toolbar-closebutton {
+  list-style-image: url("chrome://browser/skin/devtools/close.png");
+  -moz-appearance: none;
+  border: none;
+  margin: 0 4px;
+  min-width: 16px;
+  width: 16px;
+  opacity: 0.6;
+}
+
+#developer-toolbar-closebutton > .toolbarbutton-icon {
+  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
+     use evil CSS to give the impression of smaller content */
+  margin: -4px;
+}
+
+#developer-toolbar-closebutton > .toolbarbutton-text {
+  display: none;
+}
+
+#developer-toolbar-closebutton:hover {
+  opacity: 0.8;
+}
+
+#developer-toolbar-closebutton:hover:active {
+  opacity: 1;
+}
+
+/* GCLI */
+
+html|*#gcli-tooltip-frame,
+html|*#gcli-output-frame {
+  padding: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+
+#gcli-output,
+#gcli-tooltip {
+  border-width: 0;
+  background-color: transparent;
+  -moz-appearance: none;
+}
+
+.gclitoolbar-input-node,
+.gclitoolbar-complete-node {
+  margin: 0;
+  -moz-box-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 8px;
+  text-shadow: none;
+  box-shadow: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.gclitoolbar-input-node {
+  -moz-appearance: none;
+  color: hsl(210,30%,85%);
+  padding-left: 20px;
+  background-color: #242b33;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  box-shadow: 0 1px 1px hsla(206,37%,4%,.2) inset,
+              1px 0 0 hsla(206,37%,4%,.2) inset,
+              -1px 0 0 hsla(206,37%,4%,.2) inset;
+  line-height: 32px;
+  outline-style: none;
+  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 16, 16, 0);
+}
+
+.gclitoolbar-input-node[focused="true"] {
+  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
+  background-color: #232e38;
+}
+
+.gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
+  background-color: hsl(210,30%,85%);
+  color: hsl(210,24%,16%);
+  text-shadow: none;
+}
+
+.gclitoolbar-complete-node {
+  padding-left: 21px;
+  background-color: transparent;
+  color: transparent;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.gcli-in-incomplete,
+.gcli-in-error,
+.gcli-in-ontab,
+.gcli-in-todo,
+.gcli-in-closebrace,
+.gcli-in-param,
+.gcli-in-valid {
+  margin: 0;
+  padding: 0;
+}
+
+.gcli-in-incomplete {
+  border-bottom: 2px dotted #999;
+}
+
+.gcli-in-error {
+  border-bottom: 2px dotted #F00;
+}
+
+.gcli-in-ontab {
+  color: hsl(210,0%,35%);
+}
+
+.gcli-in-todo {
+  color: hsl(210,50%,35%);
+}
+
+.gcli-in-closebrace {
+  color: hsl(0,0%,80%);
+}
+#notification-popup[popupid="click-to-play-plugins"] > .panel-arrowcontainer > .panel-arrowcontent {
+  padding: 0px;
+}
+
+.click-to-play-plugins-notification-center-box {
+  border: 1px solid ThreeDShadow;
+  margin: 10px;
+}
+
+.plugin-popupnotification-centeritem:nth-child(odd) {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.center-item-label {
+  -moz-margin-start: 6px;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+}
+
+.center-item-warning-icon {
+  background-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+  -moz-margin-start: 6px;
+}
+
+.click-to-play-plugins-notification-button-container {
+  background: linear-gradient(rgba(0,0,0,0.04) 60%, transparent);
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.click-to-play-popup-button {
+  width: 50%;
+}
+
+.click-to-play-plugins-notification-description-box {
+  padding: 10px;
+}
+
+.click-to-play-plugins-outer-description {
+  margin-top: 8px;
+}
+
+.click-to-play-plugins-notification-link,
+.center-item-link {
+  margin: 0;
+}
+
+.messageImage[value="plugin-hidden"] {
+  list-style-image: url("chrome://browser/skin/notification-pluginNormal.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+/* Keep any changes to this style in sync with pluginProblem.css */
+notification.pluginVulnerable {
+  background-color: rgb(72,72,72);
+  background-image: url(chrome://mozapps/skin/plugins/contentPluginStripe.png);
+  color: white;
+}
+
+notification.pluginVulnerable .messageImage {
+  list-style-image: url("chrome://browser/skin/notification-pluginBlocked.png");
+}
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*** Status and progress indicator ***/
+
+#downloads-animation-container {
+  min-height: 1px;
+  min-width: 1px;
+  height: 1px;
+  margin-bottom: -1px;
+  /* Makes the outermost animation container element positioned, so that its
+     contents are rendered over the main browser window in the Z order.
+     This is required by the animated event notification. */
+  position: relative;
+  /* The selected tab may overlap #downloads-indicator-notification */
+  z-index: 5;
+}
+
+/*** Main indicator icon ***/
+
+#downloads-indicator-icon {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+                              0, 108, 18, 90) center no-repeat;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+#downloads-indicator-icon:-moz-lwtheme-brighttext {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+                              0, 108, 18, 90) center no-repeat;
+}
+
+#downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+/* In the next few rules, we use :not([counter]) as a shortcut that is
+   equivalent to -moz-any([progress], [paused]). */
+
+#downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+                              0, 108, 18, 90) center no-repeat;
+  background-size: 12px;
+}
+
+#downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+/*** Download notifications ***/
+
+#downloads-indicator-notification {
+  opacity: 0;
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes downloadsIndicatorNotificationStartRight {
+  from { opacity: 0; transform: translate(-128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
+}
+
+@keyframes downloadsIndicatorNotificationStartLeft {
+  from { opacity: 0; transform: translate(128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
+}
+
+#downloads-notification-anchor[notification="start"] > #downloads-indicator-notification {
+  background-image: url("chrome://browser/skin/downloads/download-notification-start.png");
+  animation-name: downloadsIndicatorNotificationStartRight;
+  animation-duration: 1s;
+}
+
+#downloads-notification-anchor[notification="start"]:-moz-locale-dir(rtl) > #downloads-indicator-notification {
+  animation-name: downloadsIndicatorNotificationStartLeft;
+}
+
+@keyframes downloadsIndicatorNotificationFinish {
+  from { opacity: 0; transform: scale(1); }
+  20%  { opacity: .65; animation-timing-function: ease-in; }
+  to   { opacity: 0; transform: scale(8); }
+}
+
+#downloads-notification-anchor[notification="finish"] > #downloads-indicator-notification {
+  background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
+  animation-name: downloadsIndicatorNotificationFinish;
+  animation-duration: 1s;
+}
+
+/*** Progress bar and text ***/
+
+#downloads-indicator-counter {
+  height: 9px;
+  margin: -3px 0px 0px 0px;
+  color: hsl(0,0%,30%);
+  text-shadow: hsla(0,0%,100%,.5) 0 1px;
+  font-size: 9px;
+  line-height: 9px;
+  text-align: center;
+}
+
+#downloads-indicator-counter:-moz-lwtheme-brighttext {
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,.7),
+               0 1px 1.5px rgba(0,0,0,.5);
+}
+
+#downloads-indicator-progress {
+  width: 16px;
+  height: 5px;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+}
+
+#downloads-indicator-progress > .progress-bar {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  /* The background-clip: border-box; and background-image: none; are there to expand the background-color behind the border */
+  background-clip: padding-box, border-box;
+  background-color: rgb(90, 201, 66);
+  background-image: linear-gradient(transparent 1px, rgba(255, 255, 255, 0.4) 1px, rgba(255, 255, 255, 0.4) 2px, transparent 2px), none;
+  border: 1px solid;
+  border-color: rgba(0,43,86,.6) rgba(0,43,86,.4) rgba(0,43,86,.4);
+  border-radius: 2px 0 0 2px;
+}
+
+#downloads-indicator-progress > .progress-remainder {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  background-image: linear-gradient(#505050, #575757);
+  border: 1px solid;
+  border-color: hsla(0,0%,0%,.6) hsla(0,0%,0%,.4) hsla(0,0%,0%,.4);
+  -moz-border-start: none;
+  border-radius: 0 2px 2px 0;
+}
+
+#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
+  background-color: rgb(220, 230, 81);
+}
+
+#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
+  background-image: linear-gradient(#4b5000, #515700);
+}
+
+toolbar[mode="full"] > #downloads-button[indicator] > .toolbarbutton-text {
+  margin: 0;
+  text-align: center;
+}
+
+/* Error counter */
+
+#developer-toolbar-toolbox-button[error-count]:before {
+  color: #FDF3DE;
+  min-width: 16px;
+  text-shadow: none;
+  background-image: linear-gradient(#B4211B, #8A1915);
+  border-radius: 1px;
+  -moz-margin-end: 5px;
+}
+
+/* Social toolbar item */
+
+#social-provider-button {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url(chrome://browser/skin/social/services-16.png);
+}
+
+#social-provider-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+.toolbarbutton-badge-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container {
+  padding: 2px 5px;
+}
+
+.toolbarbutton-1 > .toolbarbutton-badge-container > .toolbar-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
+  -moz-margin-end: 0;
+}
+
+.toolbarbutton-badge[badge=""] {
+  display: none;
+}
+.toolbarbutton-badge[badge]:not([badge=""])::after {
+  /* The |content| property is set in the content stylesheet. */
+  font-size: 9px;
+  font-weight: bold;
+  padding: 0 1px;
+  color: #fff;
+  background-color: rgb(240,61,37);
+  border: 1px solid rgb(216,55,34);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0,39,121,0.77);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""])::after {
+  top: 1px;
+  right: 1px;
+}
+
+.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
+  left: 0;
+  right: auto;
+}
+
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar *|* > .toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
+  left: 1px;
+  right: auto;
+}
+
+.popup-notification-icon[popupid="servicesInstall"] {
+  list-style-image: url(chrome://browser/skin/social/services-64.png);
+}
+#servicesInstall-notification-icon {
+  list-style-image: url(chrome://browser/skin/social/services-16.png);
+}
+#social-undoactivation-button,
+#servicesInstall-learnmore-link {
+  -moz-margin-start: 0; /* override default label margin to match description margin */
+}
+
+#socialActivatedNotification .popup-notification-button-container {
+  margin-left: 6px;
+}
+
+.social-activation-icon {
+  width: auto;
+  height: auto;
+  max-height: 64px;
+  max-width: 64px;
+}
+
+#social-activation-message {
+  max-width: 250px;
+}
+
+#social-activation-message > label {
+  margin: 0;
+}
+
+/* social toolbar provider menu */
+.social-statusarea-popup {
+  margin-top: 0;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.social-statusarea-user {
+  -moz-appearance: none;
+  border-bottom: 1px solid rgb(221,221,221);
+  background-color: -moz-Dialog;
+  position: relative;
+  cursor: pointer;
+  list-style-image:url("chrome://global/skin/icons/information-32.png");
+}
+
+.social-statusarea-user-portrait {
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+.social-statusarea-loggedInStatus {
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  color: -moz-nativehyperlinktext;
+  min-width: 0;
+  margin: 0 6px;
+  list-style-image: none;
+}
+
+.social-statusarea-user[_moz-menuactive] > vbox > .social-statusarea-loggedInStatus {
+  text-decoration: underline;
+}
+
+.social-panel > .panel-arrowcontainer > .panel-arrowcontent {
+  padding: 0;
+}
+
+.social-panel-frame {
+  border-radius: inherit;
+}
+
+
+.chat-status-icon {
+  max-height: 16px;
+  max-width: 16px;
+  padding: 0;
+}
+
+.chat-toolbarbutton {
+  -moz-appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  width: 16px;
+}
+
+.chat-toolbarbutton > .toolbarbutton-text {
+  display: none;
+}
+
+.chat-toolbarbutton > .toolbarbutton-icon {
+  width: inherit;
+}
+
+.chat-close-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.chat-close-button:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.chat-close-button:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.chat-minimize-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
+
+.chat-minimize-button:hover {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+.chat-minimize-button:hover:active {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+.chat-swap-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(48px, 16px, 64px, 0);
+}
+
+.chat-swap-button:hover {
+  -moz-image-region: rect(48px, 32px, 64px, 16px);
+}
+
+.chat-swap-button:hover:active {
+  -moz-image-region: rect(48px, 48px, 64px, 32px);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(32px, 16px, 48px, 0);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
+}
+
+@media (min-resolution: 2dppx) {
+  .chat-close-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+
+  .chat-close-button:hover {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+
+  .chat-close-button:hover:active {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
+
+  .chat-minimize-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(32px, 32px, 64px, 0);
+  }
+
+  .chat-minimize-button:hover {
+    -moz-image-region: rect(32px, 64px, 64px, 32px);
+  }
+
+  .chat-minimize-button:hover:active {
+    -moz-image-region: rect(32px, 96px, 64px, 64px);
+  }
+
+  .chat-swap-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(96px, 32px, 128px, 0);
+  }
+
+  .chat-swap-button:hover {
+    -moz-image-region: rect(96px, 64px, 128px, 32px);
+  }
+
+  .chat-swap-button:hover:active {
+    -moz-image-region: rect(96px, 96px, 128px, 64px);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(64px, 32px, 96px, 0);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
+    -moz-image-region: rect(64px, 64px, 96px, 32px);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
+    -moz-image-region: rect(64px, 96px, 96px, 64px);
+  }
+}
+
+.chat-title {
+  font-weight: bold;
+  color: black;
+  text-shadow: none;
+  cursor: inherit;
+}
+
+.chat-titlebar {
+  height: 20px;
+  min-height: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 2px;
+  -moz-padding-start: 6px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.chat-titlebar > .notification-anchor-icon {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.chat-titlebar[minimized="true"] {
+  border-bottom: none;
+}
+
+.chat-titlebar[activity] {
+  background-image: radial-gradient(ellipse closest-side at center, rgb(255,255,255), rgba(255,255,255,0));
+  background-repeat: no-repeat;
+  background-size: 100% 20px;
+  background-position: 0 -10px;
+}
+
+.chat-frame {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.chatbar-button {
+  list-style-image: url("chrome://browser/skin/social/services-16.png");
+  margin: 0;
+  padding: 2px;
+  height: 21px;
+  width: 21px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+@media (min-resolution: 2dppx) {
+  .chatbar-button {
+    list-style-image: url("chrome://browser/skin/social/services-16@2x.png");
+  }
+}
+
+.chatbar-button > .toolbarbutton-icon {
+  width: 16px;
+}
+
+.chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
+  width: auto;
+  height: auto;
+  max-height: 16px;
+  max-width: 16px;
+}
+
+.chatbar-button[open="true"] {
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 1px rgba(255,255,255,0.2);
+}
+
+.chatbar-button > .toolbarbutton-text,
+.chatbar-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+.chatbar-button > menupopup > menuitem[activity] {
+  font-weight: bold;
+}
+
+.chatbar-innerbox {
+  background: transparent;
+  margin: -285px 0 0;
+  overflow: hidden;
+}
+
+chatbar {
+  -moz-margin-end: 20px;
+}
+
+chatbox {
+  -moz-margin-start: 4px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+window > chatbox {
+  -moz-margin-start: 0px;
+  margin: 0px;
+  border: none;
+  padding: 0px;
+}
+
+.chat-titlebar {
+  background-color: #c4cfde;
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+
+.chat-titlebar[selected] {
+  background-color: #dae3f0;
+}
+
+.chatbar-button {
+  -moz-appearance: none;
+  background-color: #c4cfde;
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+
+.chatbar-button > .toolbarbutton-icon {
+  -moz-margin-end: 0;
+}
+
+.chatbar-button:hover,
+.chatbar-button[open="true"] {
+  background-color: #dae3f0;
+}
+
+.chatbar-button[activity]:not([open="true"]) {
+  background-image: radial-gradient(circle farthest-corner at center 3px, rgb(255,255,255) 3%, rgba(186,221,251,0.75) 40%, rgba(127,179,255,0.5) 80%, rgba(127,179,255,0.25));
+}
+
+chatbox {
+  border-top-left-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar {
+  background-image: url("chrome://browser/skin/privatebrowsing-dark.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar:-moz-locale-dir(rtl) {
+  background-position: top left;
+}
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
+  list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
+  width: 20px;
+  height: 16px;
+}
+
+
+/* UI Tour */
+
+html|div#UITourHighlight {
+  border-radius: 20px;
+  border: 2px #5B9CD9 solid;
+  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
+  min-height: 32px;
+  min-width: 32px;
+}
+
+#UITourTooltip {
+  max-width: 20em;
+}
+
+#UITourTooltipTitle {
+  font-size: 130%;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+#UITourTooltipDescription {
+  max-width: 20em;
+}
+
+/* Pale Moon feed icon */
+#ub-feed-button,
+#ub-feed-button > .button-box,
+#ub-feed-button:hover:active > .button-box {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background-color: transparent !important;
+}
+
+#ub-feed-button {
+  -moz-appearance: none;
+  min-width: 0px;
+  list-style-image: url("chrome://browser/skin/places/livemark-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#ub-feed-button:hover {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
