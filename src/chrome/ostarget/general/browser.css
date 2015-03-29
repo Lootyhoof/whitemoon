@@ -92,13 +92,13 @@
 #appmenu-button,
 #appmenu-toolbar-button { 
   -moz-appearance: none;
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.4);
   background-clip: padding-box;
   border-radius: 0 0 4px 4px;
   border: none !important;
   border-top: none !important;
   box-shadow: none;
-  color: white;
+  color: black;
   font-weight: bold;
   padding: 0 .8em .05em;
   margin: 0 0 2px 1px;
@@ -127,11 +127,11 @@
   background: none;
   border: 1px solid #C5C5C5 !important;
   border-top: none !important;
-  color: #bcbcbc;
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button {
   background-image: -moz-linear-gradient(rgb(51,51,51), rgb(0,0,0));
+  color: white;
 }
 
 #main-window[tabsintitlebar][privatebrowsingmode=temporary] #appmenu-button {
@@ -150,7 +150,6 @@
   box-shadow: 0 0 1.5px 1.5px rgba(0,0,0,.1) inset,
               0 -1px 0 rgba(0,0,0,.05) inset !important;
   text-shadow: 0 0 2px rgba(255,255,255,.5);
-  color: #b9b9b9;
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
