@@ -3,86 +3,18 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#body {
+  background: #fff;
+}
+
 /* Sources and breakpoints pane */
 
 #sources-pane {
   min-width: 50px;
 }
 
-#sources-pane > tabs {
-  -moz-border-end: 1px solid #222426; /* Match the sources list's dark margin. */
-}
-
-#sources-and-editor-splitter {
+#sources-pane + .devtools-side-splitter {
   -moz-border-start-color: transparent;
-}
-
-/* Sources toolbar */
-
-#sources-toolbar {
-  border: none; /* Remove the devtools-toolbar's black bottom border. */
-  -moz-border-end: 1px solid #222426; /* Match the sources list's dark margin. */
-}
-
-#sources-toolbar > #sources-controls > .devtools-toolbarbutton {
-  min-width: 32px;
-}
-
-#pretty-print {
-  font-weight: bold;
-}
-
-#black-box {
-  list-style-image: url(debugger-blackbox.png);
-  -moz-image-region: rect(0px,16px,16px,0px);
-}
-
-#black-box[checked] {
-  -moz-image-region: rect(0px,32px,16px,16px);
-}
-
-#sources .black-boxed {
-  color: #888;
-}
-
-#sources .black-boxed > .dbg-breakpoint {
-  display: none;
-}
-
-#sources .black-boxed + .side-menu-widget-item-arrow:-moz-locale-dir(ltr) {
-  background-image: none;
-  box-shadow: inset -1px 0 0 #222426;
-}
-
-#sources .black-boxed + .side-menu-widget-item-arrow:-moz-locale-dir(rtl) {
-  background-image: none;
-  box-shadow: inset 1px 0 0 #222426;
-}
-
-/* Black box message and source progress meter */
-
-#black-boxed-message,
-#source-progress-container {
-  background: url(background-noise-toolbar.png) rgb(61,69,76);
-  /* Prevent the container deck from aquiring the height from this message. */
-  min-height: 1px;
-  color: white;
-}
-
-#source-progress {
-  min-height: 2em;
-  min-width: 40em;
-}
-
-#black-boxed-message-label,
-#black-boxed-message-button {
-  text-align: center;
-  font-size: 120%;
-}
-
-#black-boxed-message-button {
-  margin-top: 1em;
-  padding: .25em;
 }
 
 /* ListWidget items */
@@ -91,21 +23,13 @@
   padding: 2px;
 }
 
-.theme-light .list-widget-item:not(.selected):not(.empty):hover {
+.list-widget-item:not(.selected):not(.empty):hover {
   background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.85)), Highlight;
 }
 
-.theme-light .list-widget-item.selected.light {
+.list-widget-item.selected.light {
   background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.8)), Highlight;
   color: #000;
-}
-
-.theme-dark .list-widget-item:not(.selected):not(.empty):hover {
-  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-}
-
-.theme-dark .list-widget-item.selected.light {
-  background: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.025));
 }
 
 .list-widget-item.selected {
@@ -118,58 +42,27 @@
   padding: 2px;
 }
 
-/* Breadcrumbs stack frames view */
-
-.breadcrumbs-widget-item {
-  max-width: none;
-}
+/* Stack frames view */
 
 .dbg-stackframe-details {
   -moz-padding-start: 4px;
 }
 
-/* Classic stack frames view */
-
-.dbg-classic-stackframe {
-  display: block;
-  padding: 4px;
-}
-
-.dbg-classic-stackframe-title {
+.dbg-stackframe-menuitem[checked] {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  outline: 1px solid #eee;
   font-weight: 600;
-  color: #046;
 }
 
-.dbg-classic-stackframe-details:-moz-locale-dir(ltr) {
-  float: right;
-}
-
-.dbg-classic-stackframe-details:-moz-locale-dir(rtl) {
-  float: left;
-}
-
-.dbg-classic-stackframe-details-url {
-  max-width: 90%;
-  text-align: end;
-  color: #666;
-}
-
-.dbg-classic-stackframe-details-sep {
-  color: #aaa;
-}
-
-.dbg-classic-stackframe-details-line {
-  color: #58b;
-}
-
-#callstack-list .side-menu-widget-item.selected label {
-  color: #fff;
+.dbg-stackframe-menuitem-details {
+  -moz-padding-start: 16px;
 }
 
 /* Sources and breakpoints view */
 
 .dbg-breakpoint {
-  -moz-margin-start: 4px;
+  font-family: monospace;
 }
 
 .dbg-breakpoint-line {
@@ -179,53 +72,6 @@
 .dbg-breakpoint-text {
   -moz-margin-start: 10px !important;
   font-style: italic;
-  font-size: 90%;
-}
-
-.dbg-breakpoint-checkbox {
-  width: 16px;
-  height: 16px;
-  margin: 2px;
-}
-
-/* Variable bubble view */
-
-.devtools-tooltip-simple-text.token-undefined,
-.devtools-tooltip-simple-text.token-null {
-  text-align: center;
-  color: #666 !important; /* Override the theme's color. */
-}
-
-.devtools-tooltip-simple-text.token-boolean {
-  text-align: center;
-  color: #10c !important;
-}
-
-.devtools-tooltip-simple-text.token-number {
-  text-align: center;
-  color: #c00 !important;
-}
-
-.devtools-tooltip-simple-text.token-string {
-  text-align: start;
-  color: #282 !important;
-}
-
-.devtools-tooltip-simple-text.token-other {
-  text-align: center;
-  color: #333 !important;
-}
-
-/* Instruments pane (watch expressions, variables, event listeners...) */
-
-#instruments-pane > tabs > tab {
-  min-height: 25px !important;
-  padding: 0 !important;
-}
-
-#instruments-pane .side-menu-widget-container,
-#instruments-pane .side-menu-widget-empty-notice-container {
-  box-shadow: none !important;
 }
 
 /* Watch expressions view */
@@ -242,53 +88,23 @@
 .dbg-expression-arrow {
   width: 16px;
   height: auto;
-  background: -moz-image-rect(url(commandline-icon.png), 0, 32, 16, 16);
+  background: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
 }
 
 .dbg-expression-input {
   -moz-padding-start: 2px !important;
-  color: inherit;
-}
-
-/* Event listeners view */
-
-.dbg-event-listener {
-  padding: 4px 8px;
-}
-
-.dbg-event-listener-type {
-  font-weight: 600;
-}
-
-.dbg-event-listener-separator {
-  color: #999;
-}
-
-.dbg-event-listener-targets {
-  color: #046;
-}
-
-.dbg-event-listener-location {
-  color: #666;
-}
-
-#event-listeners .side-menu-widget-item.selected {
-  background: none !important;
+  font-family: Menlo, Monaco, monospace;
 }
 
 /* Searchbox and the search operations help panel */
 
-#searchbox {
+.devtools-searchinput {
   min-width: 220px;
   -moz-margin-start: 1px;
 }
 
-#filter-label {
-  -moz-margin-start: 2px;
-}
-
-#searchbox-panel-operators {
-  margin-top: 5px;
+#searchbox-panel-description {
+  margin-top: 0;
   margin-bottom: 8px;
   -moz-margin-start: 2px;
 }
@@ -300,6 +116,7 @@
   -moz-margin-start: 2px;
   -moz-margin-end: 6px;
   text-align: center;
+  font-family: Menlo, Monaco, monospace;
 }
 
 .searchbox-panel-operator-label {
@@ -397,6 +214,7 @@
   -moz-padding-end: 4px;
   padding-top: 2px;
   text-align: end;
+  font-family: monospace;
   color: #8c8c8c;
 }
 
@@ -404,6 +222,7 @@
   -moz-padding-start: 4px;
   padding-top: 1px;
   padding-bottom: 1px;
+  font-family: monospace;
 }
 
 .dbg-results-line-contents-string {
@@ -427,12 +246,7 @@
   transform: scale(1.75, 1.75);
 }
 
-/* Toolbar controls */
-
-.devtools-sidebar-tabs > tabs > tab {
-  min-height: 25px !important;
-  padding: 0 !important;
-}
+/* Toolbar Controls */
 
 #resumption-panel-desc {
   width: 200px;
@@ -443,23 +257,12 @@
 }
 
 #resume {
-  list-style-image: url("chrome://browser/skin/devtools/debugger-pause.png");
+  list-style-image: url("chrome://browser/skin/devtools/debugger-play.png");
   -moz-image-region: rect(0px,16px,16px,0px);
-  transition: background 0.15s ease-in-out;
 }
 
 #resume[checked] {
-  background: none;
-  list-style-image: url("chrome://browser/skin/devtools/debugger-play.png");
   -moz-image-region: rect(0px,32px,16px,16px);
-}
-
-#resume ~ toolbarbutton {
-  transition: opacity 0.15s ease-in-out;
-}
-
-#resume:not([checked]) ~ toolbarbutton {
-  opacity: 0.5;
 }
 
 #step-over {
@@ -474,8 +277,7 @@
   list-style-image: url("chrome://browser/skin/devtools/debugger-step-out.png");
 }
 
-#debugger-controls > toolbarbutton,
-#sources-controls > toolbarbutton {
+#debugger-controls > toolbarbutton {
   margin: 0;
   box-shadow: none;
   border-radius: 0;
@@ -484,13 +286,11 @@
   outline-offset: -3px;
 }
 
-#debugger-controls > toolbarbutton:last-of-type,
-#sources-controls > toolbarbutton:last-of-type {
+#debugger-controls > toolbarbutton:last-of-type {
   -moz-border-end-width: 0;
 }
 
-#debugger-controls,
-#sources-controls {
+#debugger-controls {
   box-shadow: 0 1px 0 hsla(209,29%,72%,.15) inset,
               0 0 0 1px hsla(209,29%,72%,.1) inset,
               0 0 0 1px hsla(209,29%,72%,.1),
@@ -518,34 +318,4 @@
 
 #instruments-pane-toggle:hover:active {
   -moz-image-region: rect(0px,48px,16px,32px);
-}
-
-/* Horizontal vs. vertical layout */
-
-#vertical-layout-panes-container {
-  min-height: 35vh;
-  max-height: 80vh;
-}
-
-#body[layout=vertical] #sources-pane > tabs {
-  -moz-border-end: none;
-}
-
-#body[layout=vertical] #instruments-pane {
-  margin: 0 !important;
-  /* To prevent all the margin hacks to hide the sidebar. */
-}
-
-#body[layout=vertical] .side-menu-widget-container,
-#body[layout=vertical] .side-menu-widget-empty-notice-container {
-  box-shadow: none !important;
-}
-
-#body[layout=vertical] .side-menu-widget-item-arrow {
-  background-image: none !important;
-}
-
-#body[layout=vertical] .side-menu-widget-group,
-#body[layout=vertical] .side-menu-widget-item {
-  -moz-margin-end: 0;
 }

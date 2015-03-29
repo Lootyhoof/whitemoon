@@ -248,20 +248,20 @@
 }
 
 .options-vertical-pane {
-  margin: 5px;
+  margin: 15px;
   width: calc(50% - 30px);
   min-width: 400px;
   -moz-padding-start: 5px;
 }
 
 .options-vertical-pane > label {
-  padding: 2px 0;
+  padding: 5px 0;
   font-size: 1.4rem;
 }
 
 .options-groupbox {
   -moz-margin-start: 15px;
-  padding: 2px;
+  padding: 4px;
 }
 
 .options-groupbox > * {
@@ -279,9 +279,4 @@
 .options-citation-label + label {
   padding: 3px 0 0 !important; /* To align it with the checkbox */
   font-style: italic;
-}
-
-.hidden-labels-box:not(.visible) > label,
-.hidden-labels-box.visible ~ .hidden-labels-box > label:last-child {
-  display: none;
 }

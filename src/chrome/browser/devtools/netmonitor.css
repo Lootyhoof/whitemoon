@@ -312,12 +312,12 @@ box.requests-menu-status[code^="5"] {
 
 /* SideMenuWidget */
 
-.side-menu-widget-container {
-  box-shadow: none !important;
-}
-
 .side-menu-widget-item[odd] {
   background: rgba(255,255,255,0.05);
+}
+
+.side-menu-widget-item-contents {
+  padding: 0;
 }
 
 /* Network request details */
@@ -365,6 +365,11 @@ box.requests-menu-status[code^="5"] {
 
 .tabpanel-summary-value {
   -moz-padding-start: 3px;
+  font-family: Menlo, Monaco, monospace;
+}
+
+.variable-or-property:not(:focus) > .title > .token-string {
+  color: #10c !important;
 }
 
 /* Headers tabpanel */
@@ -376,11 +381,6 @@ box.requests-menu-status[code^="5"] {
 
 #headers-summary-size {
   padding-top: 2px;
-}
-
-#headers-summary-resend {
-  margin: 0 6px;
-  min-height: 20px;
 }
 
 /* Response tabpanel */
@@ -420,24 +420,6 @@ box.requests-menu-status[code^="5"] {
 
 #timings-tabpanel .requests-menu-timings-total {
   transition: transform 0.2s ease-out;
-}
-
-/* Custom request form */
-
-#custom-pane {
-  padding: 0.6em 0.5em;
-}
-
-.custom-header {
-  font-size: 1.1em;
-}
-
-.custom-section {
-  margin-top: 0.5em;
-}
-
-#custom-method-value {
-  width: 4.5em;
 }
 
 /* Footer */

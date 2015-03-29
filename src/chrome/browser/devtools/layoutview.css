@@ -11,8 +11,8 @@
 }
 
 .theme-body {
-  color: hsl(210,100%,85%) !important;
-  -moz-box-sizing: border-box;
+  color: hsl(210,100%,85%);
+  box-sizing: border-box;
 }
 
 #main {

@@ -1,5 +1,5 @@
 * {
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 #all-fonts {
-  padding: 0;
+  padding: 0 5px;
   margin: 0;
 }
 
@@ -23,7 +23,8 @@ body {
 }
 
 .font {
-  padding: 10px 10px;
+  padding: 10px 5px;
+  font-size: 0;
 }
 
 .theme-dark .font {
@@ -50,6 +51,7 @@ body {
 }
 
 .font-info {
+  font-size: 1rem;
   display: block;
 }
 
