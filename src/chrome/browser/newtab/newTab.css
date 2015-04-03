@@ -154,17 +154,9 @@
 /* TITLES */
 .newtab-title {
   padding: 0 8px;
-  background-color: rgba(0,0,0,.7);
-  color: #fff;
-  font-size: 12px;
+  background-color: rgba(248,249,251,.95);
+  color: #1f364c;
   line-height: 24px;
-  opacity: 0;
-  transition: opacity 100ms ease-out;
-}
-
-.newtab-site:hover .newtab-title {
-  opacity: 1;
-  transition: opacity 100ms ease-in;
 }
 
 /* CONTROLS */
