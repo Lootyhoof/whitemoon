@@ -81,15 +81,16 @@
 
 /* TOGGLE */
 #newtab-toggle {
-  width: 16px;
-  height: 16px;
-  padding: 0;
+  background-color: transparent;
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 32, 32, 0);
+  background-size: 32px;
   border: none;
-  background: -216px 0 transparent url(chrome://browser/skin/newtab/controls.png);
+  height: 28px;
+  width: 28px;
 }
 
-#newtab-toggle[page-disabled] {
-  background-position: -232px 0;
+#newtab-toggle:-moz-any(:hover, :active, [active]) {
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 64, 32, 32);
 }
 
 /* ROWS */
@@ -168,49 +169,38 @@
 
 /* CONTROLS */
 .newtab-control {
-  width: 24px;
-  height: 24px;
-  padding: 1px 2px 3px;
+  background-color: transparent;
+  background-size: 24px;
   border: none;
-  background: transparent url(chrome://browser/skin/newtab/controls.png);
-  transition-delay: 0s;
+  height: 26px;
+  width: 24px;
 }
 
-.newtab-control:-moz-focusring,
-.newtab-site:hover > .newtab-control {
-  transition-delay: 800ms;
+.newtab-control-pin,
+.newtab-site[pinned] .newtab-control-pin:hover {
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 96, 33, 64);
 }
 
-.newtab-control-pin:hover {
-  background-position: -24px 0;
+.newtab-control-pin:hover:active,
+.newtab-site[pinned] .newtab-control-pin:hover:active {
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 160, 33, 128);
 }
 
-.newtab-control-pin:active {
-  background-position: -48px 0;
-}
-
-.newtab-control-pin[pinned] {
-  background-position: -72px 0;
-}
-
-.newtab-control-pin[pinned]:hover {
-  background-position: -96px 0;
-}
-
-.newtab-control-pin[pinned]:active {
-  background-position: -120px 0;
+.newtab-control-pin:hover,
+.newtab-site[pinned] .newtab-control-pin {
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 128, 33, 96);
 }
 
 .newtab-control-block {
-  background-position: -144px 0;
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 192, 33, 160);
 }
 
 .newtab-control-block:hover {
-  background-position: -168px 0;
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 224, 33, 192);
 }
 
-.newtab-control-block:active {
-  background-position: -192px 0;
+.newtab-control-block:hover:active {
+  background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 256, 33, 224);
 }
 
 /* MARGINS */
