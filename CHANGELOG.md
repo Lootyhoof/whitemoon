@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.3
+- fix newtab quickdial titles
+
 ### 1.0.2
 - shade verifiedDomain domains
 - import icons from latest Simple White release
