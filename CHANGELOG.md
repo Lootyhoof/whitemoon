@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.0.2
+- shade verifiedDomain domains
+- import icons from latest Simple White release
+
 ### 1.0.1
 - fix appmenu colour
 - fix devtools
