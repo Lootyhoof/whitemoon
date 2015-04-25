@@ -15,6 +15,7 @@ dialog {
   padding-bottom: 10px;
   -moz-padding-start: 8px;
   -moz-padding-end: 10px;
+  background-color: white;
 }
 
 /* ::::: dialog buttons ::::: */
