@@ -1164,10 +1164,5 @@ html|div#UITourHighlight {
 #ub-feed-button {
   -moz-appearance: none;
   min-width: 0px;
-  list-style-image: url("chrome://browser/skin/places/livemark-item.png");
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
-}
-
-#ub-feed-button:hover {
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");
 }

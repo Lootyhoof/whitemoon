@@ -163,12 +163,11 @@ toolbarbutton.bookmark-item > menupopup {
 /* ::::: bookmark items ::::: */
 
 .bookmark-item  {
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
-  -moz-image-region: auto;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
 .bookmark-item[container] {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
@@ -900,9 +899,9 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/editBookmark.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
-  width: 16px; 
+  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
+  width: 16px;
   height: 16px;
 }
 
@@ -1182,7 +1181,8 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 }
 
 #star-button[starred="true"] {
-  list-style-image: url("chrome://browser/skin/places/editBookmark.png");
+  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  -moz-image-region: rect(0px 32px 16px 16px);
 }
 
 
@@ -1318,7 +1318,7 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 .tab-icon-image {
   width: 16px;
   height: 16px;
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
   -moz-margin-start: 2px;
   -moz-margin-end: 3px;
@@ -1496,7 +1496,8 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 
 
 .alltabs-item > .menu-iconic-left > .menu-iconic-icon {
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
 .alltabs-item[selected="true"] {

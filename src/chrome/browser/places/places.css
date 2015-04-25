@@ -22,7 +22,8 @@
 
 /* Trees */
 treechildren::-moz-tree-image(title) {
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
   padding-right: 2px;
   margin: 0px 2px;
   width: 16px;
