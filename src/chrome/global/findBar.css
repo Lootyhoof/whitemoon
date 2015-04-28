@@ -93,6 +93,8 @@ findbar[hidden] {
   list-style-image: url("chrome://global/skin/icons/find-arrows.png");
   padding: 2px 6px;
   -moz-margin-start: 0;
+  margin-left: 3px;
+  border-radius: 3px;
 }
 
 .findbar-find-previous:not([disabled]):active,
@@ -107,12 +109,6 @@ findbar[hidden] {
 .findbar-find-next {
   -moz-image-region: rect(0, 20px, 9px, 10px);
   -moz-padding-end: 6px;
-}
-
-.findbar-find-previous,
-.findbar-find-previous:not([disabled]):active {
-  border-right: none;
-  border-left: none;
 }
 
 .findbar-find-previous > .toolbarbutton-icon,
