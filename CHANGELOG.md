@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.4
+- import more icons from Simple White
+- persona implementation
+- internal cleanup
+- findbar tweaks
+
 ### 1.0.3
 - fix newtab quickdial titles
 
