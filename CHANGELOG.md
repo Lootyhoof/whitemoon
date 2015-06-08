@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.5
+- remove double padlocks on HTTPS
+- fix library icon mapping
+- fix video controls
+
 ### 1.0.4
 - import more icons from Simple White
 - persona implementation
