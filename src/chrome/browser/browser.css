@@ -981,30 +981,6 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
   list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
 }
 
-.chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://branding/content/identity-icons-brand.png);
-}
-
-.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https.png);
-}
-
-.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
-}
-
-.mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-active.png);
-}
-
-.mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-display.png);
-}
-
-.mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-display.png);
-}
-
 #page-proxy-favicon[pageproxystate="invalid"] {
   opacity: 0.3;
 }
