@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.6
+- use new tab scroll icons from Simple White
+
 ### 1.0.5
 - remove double padlocks on HTTPS
 - fix library icon mapping
