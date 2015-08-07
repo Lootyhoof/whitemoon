@@ -106,32 +106,39 @@
 }
 
 
-#main-window[privatebrowsingmode=temporary] #appmenu-button {
+#main-window[privatebrowsingmode=temporary] #appmenu-button,
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
   background-image: -moz-linear-gradient(rgba(15,15,15,.85),rgba(15,15,15,.85));
   border-color: rgba(43,43,43,.9) !important;
   color: white;
 }
 
-#appmenu-button:hover:not(:active):not([open]) {
+#appmenu-button:hover:not(:active):not([open]),
+#appmenu-toolbar-button:hover:not(:active):not([open]) {
   background: rgba(240,240,240,.85);
   border-color: rgba(0,0,0,.20) !important;
 }
 
-#main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
+#main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]),
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button:hover:not(:active):not([open]) {
   background-image: -moz-linear-gradient(rgba(20,20,20,.75),rgba(20,20,20,.75));
   box-shadow: none !important;
   color: white;
 }
 
 #appmenu-button:hover:active,
-#appmenu-button[open] {
+#appmenu-button[open],
+#appmenu-toolbar-button:hover:active,
+#appmenu-toolbar-button[open] {
   border-radius: 0;
   background: rgba(255,255,255,.4);
   border-color: rgba(0,0,0,.25) !important;
 }
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
-#main-window[privatebrowsingmode=temporary] #appmenu-button[open] {
+#main-window[privatebrowsingmode=temporary] #appmenu-button[open],
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button:hover:active,
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button[open] {
   background-image: -moz-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4));
   color: white;
 }
@@ -141,7 +148,8 @@
   padding: 0;
 }
 
-#appmenu-button > .button-box > .button-menu-dropmarker {
+#appmenu-button > .button-box > .button-menu-dropmarker,
+#appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {
   list-style-image: url(chrome://browser/skin/appmenu-dropmarker.png);
   width: auto;
   height: auto;
@@ -150,7 +158,8 @@
   -moz-margin-start: .5em;
 }
 
-#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .button-menu-dropmarker {
+#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .button-menu-dropmarker,
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {
   list-style-image: url(chrome://browser/skin/appmenu-dropmarker-private.png);
 }  
 
@@ -179,81 +188,79 @@
   -moz-border-end: 1px solid ThreeDShadow;
 }
 
-@media all and (-moz-windows-default-theme) {
-  #appmenu-popup {
-    -moz-appearance: none;
-    background: white;
-    border: 1px solid ThreeDShadow;
-  }
-  #appmenuPrimaryPane {
-    background-color: rgba(255,255,255,0.5);
-    padding: 2px;
-    -moz-border-end: none;
-  }
-  #appmenuSecondaryPane {
-    background-color: #f7f7f7;
-    box-shadow: 1px 0 2px rgb(204,204,204) inset;
-    -moz-padding-start: 3px;
-    -moz-padding-end: 2px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
-  }
-  #appmenuSecondaryPane:-moz-locale-dir(rtl) {
-    box-shadow: -1px 0 2px rgb(204,204,204) inset;
-  }
+#appmenu-popup {
+  -moz-appearance: none;
+  background: white;
+  border: 1px solid ThreeDShadow;
+}
+#appmenuPrimaryPane {
+  background-color: rgba(255,255,255,0.5);
+  padding: 2px;
+  -moz-border-end: none;
+}
+#appmenuSecondaryPane {
+  background-color: #f7f7f7;
+  box-shadow: 1px 0 2px rgb(204,204,204) inset;
+  -moz-padding-start: 3px;
+  -moz-padding-end: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+#appmenuSecondaryPane:-moz-locale-dir(rtl) {
+  box-shadow: -1px 0 2px rgb(204,204,204) inset;
+}
 
-  #appmenuPrimaryPane menupopup {
-    -moz-appearance: none;
-    background-image: -moz-linear-gradient(left, white 26px, ThreeDLightShadow 26px,
-                                           ThreeDLightShadow 27px, ThreeDHighlight 27px,
-                                           ThreeDHighlight 28px, white 28px);
-    border: 3px solid;
-    -moz-border-top-colors: ThreeDShadow white;
-    -moz-border-bottom-colors: ThreeDShadow white;
-    -moz-border-left-colors: ThreeDShadow white;
-    -moz-border-right-colors: ThreeDShadow white;
-  }
+#appmenuPrimaryPane menupopup {
+  -moz-appearance: none;
+  background-image: -moz-linear-gradient(left, white 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, white 28px);
+  border: 3px solid;
+  -moz-border-top-colors: ThreeDShadow white;
+  -moz-border-bottom-colors: ThreeDShadow white;
+  -moz-border-left-colors: ThreeDShadow white;
+  -moz-border-right-colors: ThreeDShadow white;
+}
 
-  #appmenuSecondaryPane menupopup {
-    -moz-appearance: none;
-    background-image: -moz-linear-gradient(left, #f7f7f7 26px, ThreeDLightShadow 26px,
-                                           ThreeDLightShadow 27px, ThreeDHighlight 27px,
-                                           ThreeDHighlight 28px, #f7f7f7 28px);
-    border: 3px solid;
-    -moz-border-top-colors: ThreeDShadow #f7f7f7;
-    -moz-border-bottom-colors: ThreeDShadow #f7f7f7;
-    -moz-border-left-colors: ThreeDShadow #f7f7f7;
-    -moz-border-right-colors: ThreeDShadow #f7f7f7;
-  }
+#appmenuSecondaryPane menupopup {
+  -moz-appearance: none;
+  background-image: -moz-linear-gradient(left, #f7f7f7 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, #f7f7f7 28px);
+  border: 3px solid;
+  -moz-border-top-colors: ThreeDShadow #f7f7f7;
+  -moz-border-bottom-colors: ThreeDShadow #f7f7f7;
+  -moz-border-left-colors: ThreeDShadow #f7f7f7;
+  -moz-border-right-colors: ThreeDShadow #f7f7f7;
+}
 
-  #appmenuPrimaryPane menupopup:-moz-locale-dir(rtl) {
-    background-image: -moz-linear-gradient(right, white 26px, ThreeDLightShadow 26px,
-                                           ThreeDLightShadow 27px, ThreeDHighlight 27px,
-                                           ThreeDHighlight 28px, white 28px);
-  }
-  #appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
-    background-image: -moz-linear-gradient(right, #f7f7f7 26px, ThreeDLightShadow 26px,
-                                           ThreeDLightShadow 27px, ThreeDHighlight 27px,
-                                           ThreeDHighlight 28px, #f7f7f7 28px);
-  }
+#appmenuPrimaryPane menupopup:-moz-locale-dir(rtl) {
+  background-image: -moz-linear-gradient(right, white 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, white 28px);
+}
+#appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
+  background-image: -moz-linear-gradient(right, #f7f7f7 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, #f7f7f7 28px);
+}
 
-  .appmenu-menuseparator {
-    -moz-appearance: none;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    -moz-margin-start: 30px;
-    padding: 0;
-    border-top: 1px solid #e1e1e1;
-    border-bottom: none;
-  }
+.appmenu-menuseparator {
+  -moz-appearance: none;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  -moz-margin-start: 30px;
+  padding: 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: none;
+}
 
-  .appmenu-edit-button:not([disabled]):hover {
-    border: 1px solid #b8d6fb;
-    box-shadow: inset 0 0 1px white;
-    background: -moz-linear-gradient(#fafbfd, #ebf3fd);
-    -moz-transition: .2s ease-in;
-  }
+.appmenu-edit-button:not([disabled]):hover {
+  border: 1px solid #b8d6fb;
+  box-shadow: inset 0 0 1px white;
+  background: -moz-linear-gradient(#fafbfd, #ebf3fd);
+  -moz-transition: .2s ease-in;
 }
 
 #appmenuSecondaryPane-spacer {
