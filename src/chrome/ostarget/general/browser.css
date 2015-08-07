@@ -248,11 +248,6 @@ menuitem.bookmark-item {
   padding: 0;
 }
 
-#TabsToolbar:not(:-moz-lwtheme) {
-  background: -moz-linear-gradient(bottom, rgba(188,188,188,1) 1px, transparent 1px),
-              -moz-linear-gradient(bottom, rgba(246,246,246,1), rgba(246,246,246,1)) !important;
-}
-
 @media all and (-moz-windows-default-theme) {
   #main-window[sizemode=normal] #TabsToolbar:not([inFullscreen]) {
     padding-left: 2px;
