@@ -1,5 +1,14 @@
 # Changelog
 
+### 1.1.0
+- Pale Moon v26 compatibility
+- Windows 10 window border fixes
+- re-style autocomplete to match places
+- simplify tabbar gradient on Win10
+- use popup from Simple White
+- use arrows from Simple White
+- Linux: style appmenu
+
 ### 1.0.6
 - use new tab scroll icons from Simple White
 
