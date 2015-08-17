@@ -750,10 +750,16 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url(chrome://browser/skin/tabview/tabview.png);
 }
 
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 #tabview-button:-moz-lwtheme-brighttext {
   list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
+}
+
+@media (-moz-os-version: windows-vista),
+	   (-moz-os-version: windows-win7) {
+  :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+  :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme) {
+	list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
+  }
 }
 
 #tabview-button {
@@ -1607,11 +1613,17 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   background-origin: border-box;
 }
 
-#main-window[tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-#main-window[tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png);
+}
+
+@media (-moz-os-version: windows-vista),
+	   (-moz-os-version: windows-win7) {
+  #main-window[tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+  #main-window[tabsontop=true] .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-system-metric(windows-compositor):not(:-moz-lwtheme) {
+	list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png);
+  }
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up[disabled],
@@ -1645,14 +1657,20 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-image-region: auto;
 }
 
-#main-window[tabsontop=true] #TabsToolbar > #new-tab-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-#main-window[tabsontop=true] #TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 .tabs-newtab-button:-moz-lwtheme-brighttext,
 #TabsToolbar > #new-tab-button:-moz-lwtheme-brighttext,
 #TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-lwtheme-brighttext {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
 }
 
+@media (-moz-os-version: windows-vista),
+	   (-moz-os-version: windows-win7) {
+  #main-window[tabsontop=true] #TabsToolbar > #new-tab-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+  #main-window[tabsontop=true] #TabsToolbar > toolbarpaletteitem > #new-tab-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme) {
+	list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png);
+  }
+}
+  
 .tabs-newtab-button {
   width: 27px;
 }
@@ -1675,11 +1693,17 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-image-region: auto;
 }
 
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 #alltabs-button[type="menu"]:-moz-lwtheme-brighttext {
   list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png");
 }
+
+@media (-moz-os-version: windows-vista),
+	   (-moz-os-version: windows-win7) {
+  :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+  :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme) {
+	list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png");
+  }
+}  
 
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
   margin: 0 2px;
