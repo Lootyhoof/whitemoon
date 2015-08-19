@@ -105,19 +105,8 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
 }
 
 .autocomplete-richlistitem[selected="true"] {
-  background-color: Highlight;
-  color: HighlightText;
-}
-
-@media (-moz-windows-default-theme) {
-  /*
-  -moz-appearance: menuitem is almost right, but the hover effect is not
-  transparent and is lighter than desired.
-  */
-  .autocomplete-richlistitem[selected="true"] {
-    color: rgb(0,0,0);
-    background-color: #F0F0F0;
-  }
+  color: rgb(0,0,0);
+  background-color: #F0F0F0;
 }
 
 .ac-title-box {
