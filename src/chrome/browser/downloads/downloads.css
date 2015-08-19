@@ -12,12 +12,6 @@
   padding: 0;
 }
 
-#downloadsListBox {
-  background-color: transparent;
-  padding: 4px;
-  color: inherit;
-}
-
 #downloadsPanel:not([hasdownloads]) > #downloadsListBox {
   display: none;
 }
@@ -89,11 +83,6 @@ richlistitem[type="download"]:first-child {
   }
 }
 
-#downloadsPanel[keyfocus] > #downloadsListBox:focus > richlistitem[type="download"][selected] {
-  outline: 1px -moz-dialogtext dotted;
-  outline-offset: -1px;
-}
-
 .downloadTypeIcon {
   -moz-margin-end: 8px;
   /* Prevent flickering when changing states. */
@@ -163,12 +152,8 @@ richlistitem[type="download"]:first-child {
 /*** Highlighted list items ***/
 
 #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
-  border-radius: 3px;
-  border-top: 1px solid hsla(0,0%,100%,.2);
-  border-bottom: 1px solid hsla(0,0%,0%,.2);
-  background-color: Highlight;
-  color: HighlightText;
-  cursor: pointer;
+  color: rgb(0,0,0);
+  background-color: #F0F0F0;
 }
 
 /*** Button icons ***/
@@ -210,19 +195,4 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:hove
 }
 richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:active {
   -moz-image-region: rect(32px, 64px, 48px, 48px);
-}
-
-@media (-moz-windows-default-theme) {
-  richlistitem[type="download"] {
-    border: 1px solid transparent;
-    border-bottom: 1px solid hsl(213,40%,90%);
-  }
-
-  #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
-    border: 1px solid hsl(213,45%,65%);
-    box-shadow: 0 0 0 1px hsla(0,0%,100%,.5) inset,
-                0 1px 0 hsla(0,0%,100%,.3) inset;
-    background-image: linear-gradient(hsl(212,86%,92%), hsl(212,91%,86%));
-    color: black;
-  }
 }
