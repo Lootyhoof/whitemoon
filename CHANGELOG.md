@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.1.1
+- use correct #bookmarks-menu-button
+- only use inverted icons on Vista/Win7
+- use places list styling for downloads panel
+- use autocomplete styling on non-Windows also
+- use themed download notification icon
+
 ### 1.1.0
 - Pale Moon v26 compatibility
 - Windows 10 window border fixes
