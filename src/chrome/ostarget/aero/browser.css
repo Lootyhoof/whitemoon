@@ -341,8 +341,8 @@ menuitem.bookmark-item {
     #main-window[sizemode=normal] #navigator-toolbox::after,
     #main-window[sizemode=normal] #navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
     #main-window[sizemode=normal] #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#nav-bar) {
-      border-left: 1px solid rgba(10%,10%,10%,.4);
-      border-right: 1px solid rgba(10%,10%,10%,.4);
+      border-left: 1px solid hsla(0,0%,12%,0.25);
+      border-right: 1px solid hsla(0,0%,12%,0.25);
       background-clip: padding-box;
     }
   
@@ -352,11 +352,11 @@ menuitem.bookmark-item {
     #main-window[sizemode=normal] #browser-border-start,
     #main-window[sizemode=normal] #browser-border-end {
       display: -moz-box;
-      background-color: rgba(10%,10%,10%,.4);
+      background-color: hsla(0,0%,12%,0.25);
       width: 1px;
     }
     #main-window[sizemode=normal] #browser-bottombox {
-      border: 1px solid rgba(10%,10%,10%,.4);
+      border: 1px solid hsla(0,0%,12%,0.25);
       border-top-style: none;
     }
 }
