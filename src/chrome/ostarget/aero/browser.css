@@ -369,6 +369,13 @@ menuitem.bookmark-item {
       border-top-left-radius: 3.5px;
       border-top-right-radius: 3.5px;
     }
+	
+	#main-window[sizemode=normal][tabsontop=true] #nav-bar:not(:-moz-lwtheme),
+    #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
+    #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme) {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
   }
   
   
@@ -376,8 +383,6 @@ menuitem.bookmark-item {
   #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
   #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme) {
     border-top: 1px solid rgba(10%,10%,10%,.4);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
     background-clip: padding-box;
   }
   #main-window[sizemode=normal]:not([disablechrome]) #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
