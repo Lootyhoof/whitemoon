@@ -359,13 +359,17 @@ menuitem.bookmark-item {
       border: 1px solid hsla(0,0%,12%,0.25);
       border-top-style: none;
     }
-}
-  
-  #main-window[sizemode=normal][tabsontop=false] #PersonalToolbar:not(:-moz-lwtheme) {
-    border-top-left-radius: 3.5px;
-    border-top-right-radius: 3.5px;
   }
-
+  
+  /* Round top corners on Vista/7/8, but not Win10 because it's flush against the window edge */
+  @media (-moz-os-version: windows-vista),
+  (-moz-os-version: windows-win7),
+  (-moz-os-version: windows-win8) {
+    #main-window[sizemode=normal][tabsontop=false] #PersonalToolbar:not(:-moz-lwtheme) {
+      border-top-left-radius: 3.5px;
+      border-top-right-radius: 3.5px;
+    }
+  }
   
   
   #main-window[sizemode=normal][tabsontop=true] #nav-bar:not(:-moz-lwtheme),
