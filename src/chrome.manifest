@@ -6,3 +6,5 @@ skin global whitemoon chrome/global-darwin/ os=Darwin
 skin ostarget whitemoon chrome/ostarget/general/
 skin ostarget whitemoon chrome/ostarget/aero/ os=WINNT osversion>=6
 skin ostarget whitemoon chrome/ostarget/darwin/ os=Darwin
+skin appver whitemoon chrome/appver/25/ appversion<=25.*
+skin appver whitemoon chrome/appver/26/ appversion>26.0.0b2
