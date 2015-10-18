@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2
+- (Win10) round corner removal on certain UI elements
+- (Win10) shade window background on Pale Moon 26 builds later than b2
+
 ### 1.1.1
 - use correct #bookmarks-menu-button
 - only use inverted icons on Vista/Win7
