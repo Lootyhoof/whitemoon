@@ -27,7 +27,7 @@
           margin-bottom: 5px !important;
         }
 		
-		#tabbrowser-tabs {
+		#main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
 		  min-height: 28px;
 		}
 
