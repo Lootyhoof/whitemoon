@@ -1,5 +1,14 @@
 # Changelog
 
+### 1.2.0
+- (PM26) add history menu button
+- show more icons in history/bookmarks menus
+- style tabs using pure CSS
+- use error icons from Simple White X
+- make critical notifications more theme-native
+- use SVG icons for category icons in about:addons
+- use theme-native unified back/forward menu icons
+
 ### 1.1.2
 - (Win10) round corner removal on certain UI elements
 - (Win10) shade window background on Pale Moon 26 builds later than b2
