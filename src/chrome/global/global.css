@@ -58,19 +58,19 @@ window.dialog {
 }
 
 .message-icon {
-  list-style-image: url("chrome://global/skin/icons/information-32.png");
+  list-style-image: url("chrome://global/skin/icons/information-16.svg");
 }
 
 .alert-icon {
-  list-style-image: url("chrome://global/skin/icons/Warning.png");
+  list-style-image: url("chrome://global/skin/icons/warning-16.svg");
 }
 
 .error-icon {
-  list-style-image: url("chrome://global/skin/icons/Error.png");
+  list-style-image: url("chrome://global/skin/icons/error-16.svg");
 }
 
 .question-icon {
-  list-style-image: url("chrome://global/skin/icons/Question.png");
+  list-style-image: url("chrome://global/skin/icons/question-16.svg");
 }
 
 /* ::::: iframe ::::: */

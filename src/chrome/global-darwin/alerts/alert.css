@@ -78,9 +78,8 @@ label {
 }
 
 .alertCloseButton {
-  list-style-image: url("chrome://global/skin/icons/close.png");
+  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
   -moz-appearance: none;
-  -moz-image-region: rect(0, 16px, 16px, 0);
   padding: 4px 2px;
   border: none !important;
 }
@@ -90,10 +89,10 @@ label {
 }
 
 .alertCloseButton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
+  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
 }
 
 .alertCloseButton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+  list-style-image: url("chrome://global/skin/icons/close.svg#active");
 }
 
