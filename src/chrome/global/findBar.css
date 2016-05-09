@@ -41,6 +41,10 @@ findbar[hidden] {
   -moz-box-ordinal-group: 0;
 }
 
+.findbar-closebutton:-moz-lwtheme-brighttext {
+  filter: url("chrome://global/skin/icons/invert.svg#invert");
+}
+
 .findbar-closebutton:hover {
   list-style-image: url("chrome://global/skin/icons/close.svg#hover");
 }
