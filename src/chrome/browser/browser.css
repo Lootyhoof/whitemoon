@@ -1148,7 +1148,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-stop-button:not(:hover):not(:active),
 #urlbar-go-button:not(:hover):not(:active),
 #go-button:not(:hover):not(:active) {
- opacity: .6;
+  opacity: .6;
 }
 
 #page-report-button {
