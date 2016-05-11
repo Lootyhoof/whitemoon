@@ -1,5 +1,6 @@
 @media all and (-moz-windows-compositor) {
   #main-window {
+	background-color: transparent;
     -moz-appearance: -moz-win-glass;
   }
 
@@ -15,12 +16,7 @@
   @media not all and (-moz-os-version: windows-vista) {
     @media not all and (-moz-os-version: windows-win7) {
       @media not all and (-moz-os-version: windows-win8) {
-        /* Draw XUL caption buttons and background on Win10 */
-        @media (-moz-windows-default-theme) {
-          #main-window {
-            background-color: #F0F0F0;
-          }
-        }
+        /* Draw XUL caption buttons on Win10 in lwthemes*/
 		
 		#appmenu-button {
           margin-top: -1px !important;
@@ -39,7 +35,7 @@
         .titlebar-button {
           border: none;
           margin: 0 !important;
-          padding: 8px 17px;
+          padding: 9px 17px;
         }
 
         #main-window[sizemode=maximized] .titlebar-button {
@@ -56,23 +52,11 @@
           margin-top: -4px;
         }
 
-        #titlebar-min {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
-        }
-
-        #titlebar-max {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
-        }
-
-        #main-window[sizemode="maximized"] #titlebar-max {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
-        }
-
-        #titlebar-close {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
-        }
         #titlebar-close:hover {
           list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
+        }
+		
+          padding-right: 19px;
         }
 
          /* light persona */
@@ -155,10 +139,12 @@
         @media (-moz-windows-default-theme) {
           .titlebar-button:hover {
             background-color: hsla(0, 0%, 0%, .12);
+			transition: background-color linear 100ms;
           }
 
           .titlebar-button:hover:active {
             background-color: hsla(0, 0%, 0%, .22);
+			transition: none;
           }
 
           .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
@@ -182,31 +168,6 @@
             background-color: hsla(0, 0%, 255%, .32);
           }
         }
-        
-        @media not all and (-moz-windows-default-theme) {
-          .titlebar-button {
-            background-color: -moz-field;
-          }
-          .titlebar-button:hover {
-            background-color: Highlight;
-          }
-
-          #titlebar-min:hover {
-            list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-highlight);
-          }
-
-          #titlebar-max:hover {
-            list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-highlight);
-          }
-
-          #main-window[sizemode="maximized"] #titlebar-max:hover {
-            list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-highlight);
-          }
-
-          #titlebar-close:hover {
-            list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
-          }
-        }
       }
     }
   }
@@ -220,7 +181,6 @@
      * We can't use -moz-win-glass there because the border sizing would
      * not be correct. */
     #main-window {
-      background-color: transparent;
       -moz-appearance: -moz-win-borderless-glass;
     }
     
