@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.0
+- add several SVGs from Simple White X for improved HiDPI support
+- coloured titlebar support for Windows 10
+
 ### 1.2.1
 - (PM26) add download location styling
 
