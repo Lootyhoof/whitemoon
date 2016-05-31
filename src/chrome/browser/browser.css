@@ -2384,10 +2384,6 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   margin-left: 1em;
 }
 
-
-
-
-
 #full-screen-warning-message {
   background-color: hsl(0,0%,15%);
   color: white;
@@ -3512,31 +3508,6 @@ chatbox {
   list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
   width: 20px;
   height: 16px;
-}
-
-
-/* UI Tour */
-
-html|div#UITourHighlight {
-  border-radius: 20px;
-  border: 2px #5B9CD9 solid;
-  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
-  min-height: 32px;
-  min-width: 32px;
-}
-
-#UITourTooltip {
-  max-width: 20em;
-}
-
-#UITourTooltipTitle {
-  font-size: 130%;
-  font-weight: bold;
-  margin: 0 0 5px 0;
-}
-
-#UITourTooltipDescription {
-  max-width: 20em;
 }
 
 /* Pale Moon feed icon */
