@@ -24,7 +24,7 @@
   min-height: 18px;
 }
 
-#downloads-indicator-icon:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
                               0, 108, 18, 90) center no-repeat;
 }
