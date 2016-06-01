@@ -35,7 +35,6 @@ findbar[hidden] {
   border: none;
   padding: 0;
   margin: 0 4px;
-  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
   -moz-appearance: none;
   /* make sure the closebutton is displayed as the first element in the bar: */
   -moz-box-ordinal-group: 0;
@@ -43,14 +42,6 @@ findbar[hidden] {
 
 .findbar-closebutton:-moz-lwtheme-brighttext {
   filter: url("chrome://global/skin/icons/invert.svg#invert");
-}
-
-.findbar-closebutton:hover {
-  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
-}
-
-.findbar-closebutton:hover:active {
-  list-style-image: url("chrome://global/skin/icons/close.svg#active");
 }
 
 /* Search field */

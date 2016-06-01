@@ -78,7 +78,6 @@ label {
 }
 
 .alertCloseButton {
-  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
   -moz-appearance: none;
   padding: 4px 2px;
   border: none !important;
@@ -87,12 +86,3 @@ label {
 .alertCloseButton > .toolbarbutton-text {
   display: none;
 }
-
-.alertCloseButton:hover {
-  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
-}
-
-.alertCloseButton:hover:active {
-  list-style-image: url("chrome://global/skin/icons/close.svg#active");
-}
-

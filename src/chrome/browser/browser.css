@@ -1739,8 +1739,6 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 
 .tabs-closebutton {
   -moz-appearance: none;
-  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
-  -moz-image-region: rect(0, 16px, 16px, 0);
   padding: 4px 2px;
   margin: 0px;
   border: none;
@@ -1754,14 +1752,6 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-margin-end: 0px !important;
   -moz-padding-end: 2px !important;
   -moz-padding-start: 2px !important;
-}
-
-.tabs-closebutton:hover {
-  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
-}
-
-.tabs-closebutton:hover:active {
-  list-style-image: url("chrome://global/skin/icons/close.svg#active");
 }
 
 toolbarbutton.chevron {
@@ -2344,23 +2334,12 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 #addonbar-closebutton {
   border: none;
   padding: 0 5px;
-  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
   -moz-appearance: none;
 }
 
 #addonbar-closebutton:-moz-lwtheme-brighttext {
   filter: url("chrome://global/skin/icons/invert.svg#invert");
 }
-
-#addonbar-closebutton:hover {
-  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
-}
-
-#addonbar-closebutton:hover:active {
-  list-style-image: url("chrome://global/skin/icons/close.svg#active");
-}
-
-
 
 .statuspanel-label {
   margin: 0;
