@@ -534,8 +534,8 @@ menuitem.bookmark-item {
     #main-window[darkwindowframe=true] #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
     #main-window[darkwindowframe=true] #nav-bar[tabsontop=false] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
     #main-window[darkwindowframe=true] #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive {
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
-	}
+      list-style-image: url("chrome://browser/skin/Toolbar.png");
+    }
   }
   
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
