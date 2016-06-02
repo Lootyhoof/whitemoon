@@ -1685,6 +1685,10 @@ toolbar[brighttext] #TabsToolbar > toolbarpaletteitem > #new-tab-button {
   -moz-image-region: rect(0, 14px, 16px, 0);
 }
 
+toolbar[brighttext] #alltabs-button:not([type="menu"]) {
+  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs-inverted.png");
+}
+
 #alltabs-button:hover:active {
   -moz-image-region: rect(0, 28px, 16px, 14px);
 }  

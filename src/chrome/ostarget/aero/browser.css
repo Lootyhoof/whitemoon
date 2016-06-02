@@ -539,6 +539,14 @@ menuitem.bookmark-item {
       list-style-image: url("chrome://browser/skin/Toolbar.png");
       opacity: 0.5;
     }
+    
+    #main-window[darkwindowframe=true] #toolbar-menubar #alltabs-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #main-window[darkwindowframe=true] #TabsToolbar[tabsontop=true] #alltabs-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #main-window[darkwindowframe=true] #nav-bar[tabsontop=false] #alltabs-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #main-window[darkwindowframe=true] #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #alltabs-button:not(:-moz-lwtheme):-moz-window-inactive {
+      list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.png");
+      opacity: 0.5;
+    }
   }
   
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
