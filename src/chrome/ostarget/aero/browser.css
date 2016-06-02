@@ -264,180 +264,182 @@ menuitem.bookmark-item {
 
 /* ==== Windows 10 styling ==== */
 
-  @media not all and (-moz-os-version: windows-vista) {
-    @media not all and (-moz-os-version: windows-win7) {
-      @media not all and (-moz-os-version: windows-win8) {
-        /* Draw XUL caption buttons on Win10 in lwthemes*/
-		
-		#appmenu-button {
-          margin-top: -1px !important;
-          margin-bottom: 5px !important;
-        }
-		
-		#main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
-		  min-height: 28px;
-		}
+  @media (-moz-os-version: windows-win10) {
+    /* Draw XUL caption buttons Win10 in lwthemes */
 
-        #titlebar-buttonbox,
-        .titlebar-button {
-          -moz-appearance: none !important;
-        }
+    #titlebar-buttonbox,
+    .titlebar-button {
+      -moz-appearance: none !important;
+    }
 
-        .titlebar-button {
-          border: none;
-          margin: 0 !important;
-          padding: 9px 17px;
-        }
-
-        #main-window[sizemode=maximized] .titlebar-button {
-          padding-top: 8px;
-          padding-bottom: 8px;
-        }
-
-        .titlebar-button > .toolbarbutton-icon {
-          width: 12px;
-          height: 12px;
-        }
-
-        #main-window[chromemargin^="0,"][sizemode=normal] #navigator-toolbox {
-          margin-top: -4px;
-        }
-		
-        #main-window[sizemode="maximized"] #titlebar-close {
-          padding-right: 19px;
-        }
+    .titlebar-button {
+      border: none;
+      margin: 0 !important;
+      padding: 9px 17px;
+    }
         
-        #titlebar-close {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
-          background-color: hsl(0, 86%, 49%) !important; 
-          opacity: 0;
-        }
+    #main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
+      min-height: 28px;
+    }
+
+    #main-window[sizemode=maximized] .titlebar-button {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .titlebar-button > .toolbarbutton-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    #main-window[chromemargin^="0,"][sizemode=normal] #navigator-toolbox {
+      margin-top: -4px;
+    }
+
+	#main-window[sizemode="maximized"] #titlebar-close {
+      padding-right: 19px;
+    }
+	
+    #titlebar-close {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
+      background-color: hsl(0, 86%, 49%) !important; 
+      opacity: 0;
+    }
     
-        #titlebar-close:hover {
-          opacity: 1;
-          transition: opacity linear 100ms;
-        }
- 
-        #titlebar-close:hover:active {
-          background-color: hsl(0, 86%, 42%) !important; 
-          transition: none;
-        }
+    #titlebar-close:hover {
+      opacity: 1;
+      transition: opacity linear 100ms;
+    }
 
-         /* light persona */
-        #titlebar-min:-moz-lwtheme-darktext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline);
-          }
-        #titlebar-max:-moz-lwtheme-darktext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline);
-        }
-        #main-window[sizemode="maximized"]:-moz-lwtheme-darktext #titlebar-max:-moz-lwtheme-darktext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline);
-        }
-        #titlebar-close:-moz-lwtheme-darktext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
-        }
-        #titlebar-close:hover:-moz-lwtheme-darktext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
-        }
-		
-        /* dark persona */
-        #titlebar-min:-moz-lwtheme-brighttext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
-        }
-        #titlebar-max:-moz-lwtheme-brighttext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline-inverted);
-        }
-        #main-window[sizemode="maximized"]:-moz-lwtheme-brighttext #titlebar-max:-moz-lwtheme-brighttext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline-inverted);
-        }
-        #titlebar-close:-moz-lwtheme-brighttext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
-        }
-        #titlebar-close:hover:-moz-lwtheme-brighttext {
-          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
-        }
+    #titlebar-close:hover:active {
+      background-color: hsl(0, 86%, 42%) !important; 
+      transition: none;
+    }
+    
+    /* light persona */
+    
+    #titlebar-min:-moz-lwtheme-darktext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline);
+    }
+
+    #titlebar-max:-moz-lwtheme-darktext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline);
+    }
+
+    #main-window[sizemode="maximized"]:-moz-lwtheme-darktext #titlebar-max:-moz-lwtheme-darktext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline);
+    }
+
+    #titlebar-close:-moz-lwtheme-darktext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
+    }
+    #titlebar-close:hover:-moz-lwtheme-darktext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
+    }
         
-        /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
-         * rounds up to 13px, which makes the icon one pixel too big on 1.25dppx. Fix: */
-        @media (min-resolution: 1.20dppx) and (max-resolution: 1.45dppx) {
-          .titlebar-button > .toolbarbutton-icon {
-            width: 11.5px;
-            height: 11.5px;
-          }
-        }
+    /* dark persona */
+    
+    #titlebar-min:-moz-lwtheme-brighttext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
+    }
 
-        /* 175% dpi should result in the same device pixel sizes as 150% dpi. */
-        @media (min-resolution: 1.70dppx) and (max-resolution: 1.95dppx) {
-          .titlebar-button {
-            padding-left: 14.1px;
-            padding-right: 14.1px;
-          }
+    #titlebar-max:-moz-lwtheme-brighttext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline-inverted);
+    }
 
-          .titlebar-button > .toolbarbutton-icon {
-            width: 10.8px;
-            height: 10.8px;
-          }
-        }
+    #main-window[sizemode="maximized"]:-moz-lwtheme-brighttext #titlebar-max:-moz-lwtheme-brighttext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline-inverted);
+    }
 
-        /* 225% dpi should result in the same device pixel sizes as 200% dpi. */
-        @media (min-resolution: 2.20dppx) and (max-resolution: 2.45dppx) {
-          .titlebar-button {
-            padding-left: 15.3333px;
-            padding-right: 15.3333px;
-          }
-
-          .titlebar-button > .toolbarbutton-icon {
-            width: 10.8px;
-            height: 10.8px;
-          }
-        }
-
-        /* 275% dpi should result in the same device pixel sizes as 250% dpi. */
-        @media (min-resolution: 2.70dppx) and (max-resolution: 2.95dppx) {
-          .titlebar-button > .toolbarbutton-icon {
-            width: 10.8px;
-            height: 10.8px;
-          }
-        }
-
-        @media (-moz-windows-default-theme) {
-          .titlebar-button:hover {
-            background-color: hsla(0, 0%, 0%, .12);
-			transition: background-color linear 100ms;
-          }
-
-          .titlebar-button:hover:active {
-            background-color: hsla(0, 0%, 0%, .22);
-			transition: none;
-          }
-
-          .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
-            opacity: 0.5;
-          }
-
-          #titlebar-close:hover {
-            background-color: hsl(355, 86%, 49%);
-          }
-
-          #titlebar-close:hover:active {
-            background-color: hsl(355, 82%, 69%);
-          }
-          
-          /* dark persona */
-          .titlebar-button:-moz-lwtheme-brighttext:hover,
-          #main-window[darkwindowframe="true"] .titlebar-button:hover {
-            background-color: hsla(0, 0%, 100%, .22);
-            transition: background-color linear 100ms;
-          }
-
-          .titlebar-button:-moz-lwtheme-brighttext:hover:active,
-          #main-window[darkwindowframe="true"] .titlebar-button:hover:active	{
-            background-color: hsla(0, 0%, 100%, .32);
-            transition: none;
-          }
-        }
+    #titlebar-close:-moz-lwtheme-brighttext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
+    }
+    #titlebar-close:hover:-moz-lwtheme-brighttext {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
+    }
+        
+    /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
+     * rounds up to 13px, which makes the icon one pixel too big on 1.25dppx. Fix: */
+    @media (min-resolution: 1.20dppx) and (max-resolution: 1.45dppx) {
+      .titlebar-button > .toolbarbutton-icon {
+        width: 11.5px;
+        height: 11.5px;
       }
     }
+
+    /* 175% dpi should result in the same device pixel sizes as 150% dpi. */
+    @media (min-resolution: 1.70dppx) and (max-resolution: 1.95dppx) {
+      .titlebar-button {
+        padding-left: 14.1px;
+        padding-right: 14.1px;
+      }
+
+      .titlebar-button > .toolbarbutton-icon {
+        width: 10.8px;
+        height: 10.8px;
+      }
+    }
+
+    /* 225% dpi should result in the same device pixel sizes as 200% dpi. */
+    @media (min-resolution: 2.20dppx) and (max-resolution: 2.45dppx) {
+      .titlebar-button {
+        padding-left: 15.3333px;
+        padding-right: 15.3333px;
+      }
+
+      .titlebar-button > .toolbarbutton-icon {
+        width: 10.8px;
+        height: 10.8px;
+      }
+    }
+
+    /* 275% dpi should result in the same device pixel sizes as 250% dpi. */
+    @media (min-resolution: 2.70dppx) and (max-resolution: 2.95dppx) {
+      .titlebar-button > .toolbarbutton-icon {
+        width: 10.8px;
+        height: 10.8px;
+      }
+    }
+
+    .titlebar-button:hover {
+      background-color: hsla(0, 0%, 0%, .12);
+      transition: background-color linear 100ms;
+    }
+
+    .titlebar-button:hover:active {
+      background-color: hsla(0, 0%, 0%, .22);
+      transition: none;
+    }
+
+    .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
+      opacity: 0.5;
+    }
+
+    #titlebar-close:hover {
+      background-color: hsl(355, 86%, 49%);
+    }
+
+    #titlebar-close:hover:active {
+      background-color: hsl(355, 82%, 69%);
+    }
+          
+    /* dark persona/titlebar */
+    .titlebar-button:-moz-lwtheme-brighttext:hover,
+    #main-window[darkwindowframe="true"] .titlebar-button:hover {
+      background-color: hsla(0, 0%, 100%, .22);
+      transition: background-color linear 100ms;
+    }
+
+    .titlebar-button:-moz-lwtheme-brighttext:hover:active,
+    #main-window[darkwindowframe="true"] .titlebar-button:hover:active	{
+      background-color: hsla(0, 0%, 100%, .32);
+      transition: none;
+    }
+      
+    #appmenu-button {
+      margin-top: -1px;
+      margin-bottom: 5px;
+    }   
   }
 
 /* ==== Windows Vista/7/8 styling ==== */
@@ -535,6 +537,7 @@ menuitem.bookmark-item {
     #main-window[darkwindowframe=true] #nav-bar[tabsontop=false] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
     #main-window[darkwindowframe=true] #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive {
       list-style-image: url("chrome://browser/skin/Toolbar.png");
+      opacity: 0.5;
     }
   }
   
