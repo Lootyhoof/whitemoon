@@ -298,63 +298,58 @@ menuitem.bookmark-item {
 	#main-window[sizemode="maximized"] #titlebar-close {
       padding-right: 19px;
     }
-	
-    #titlebar-close {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-highlight);
-      background-color: hsl(0, 86%, 49%) !important; 
-      opacity: 0;
-    }
     
     #titlebar-close:hover {
-      opacity: 1;
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+      background-color: hsla(0, 86%, 49%, 1) !important; 
       transition: opacity linear 100ms;
     }
 
     #titlebar-close:hover:active {
-      background-color: hsl(0, 86%, 42%) !important; 
+      background-color: hsla(0, 86%, 49%, 0.6) !important; 
       transition: none;
     }
     
     /* light persona */
     
     #titlebar-min:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-darktext);
     }
 
     #titlebar-max:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-darktext);
     }
 
     #main-window[sizemode="maximized"]:-moz-lwtheme-darktext #titlebar-max:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-darktext);
     }
 
     #titlebar-close:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-darktext);
     }
     #titlebar-close:hover:-moz-lwtheme-darktext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-darktext);
     }
         
     /* dark persona */
     
     #titlebar-min:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-themes);
     }
 
     #titlebar-max:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-outline-inverted);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-themes);
     }
 
     #main-window[sizemode="maximized"]:-moz-lwtheme-brighttext #titlebar-max:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-outline-inverted);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-themes);
     }
 
     #titlebar-close:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-themes);
     }
     #titlebar-close:hover:-moz-lwtheme-brighttext {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-themes);
     }
         
     /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
@@ -412,14 +407,6 @@ menuitem.bookmark-item {
 
     .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
       opacity: 0.5;
-    }
-
-    #titlebar-close:hover {
-      background-color: hsl(355, 86%, 49%);
-    }
-
-    #titlebar-close:hover:active {
-      background-color: hsl(355, 82%, 69%);
     }
           
     /* dark persona/titlebar */
