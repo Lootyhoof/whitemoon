@@ -411,14 +411,14 @@ menuitem.bookmark-item {
           
     /* dark persona/titlebar */
     .titlebar-button:-moz-lwtheme-brighttext:hover,
-    #main-window[darkwindowframe="true"] .titlebar-button:hover {
-      background-color: hsla(0, 0%, 100%, .22);
+    #main-window[darkwindowframe="true"] .titlebar-button:not(:-moz-lwtheme):hover {
+      background-color: hsla(0, 0%, 100%, .12);
       transition: background-color linear 100ms;
     }
 
     .titlebar-button:-moz-lwtheme-brighttext:hover:active,
-    #main-window[darkwindowframe="true"] .titlebar-button:hover:active	{
-      background-color: hsla(0, 0%, 100%, .32);
+    #main-window[darkwindowframe="true"] .titlebar-button:not(:-moz-lwtheme):hover:active	{
+      background-color: hsla(0, 0%, 100%, .22);
       transition: none;
     }
       
