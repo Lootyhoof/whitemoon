@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.4.0
+- improve titlebar colorisation for Windows 8/10
+- use dark window frame detection on Windows 8/10
+- refactor media controls for Pale Moon 26.3
+- use unified close button icons
+- use dark toolbar detection in Pale Moon 26.3 to detect dark system themes
+
 ### 1.3.0
 - add several SVGs from Simple White X for improved HiDPI support
 - coloured titlebar support for Windows 10
