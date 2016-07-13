@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.1
+- fix tab close button icon
+
 ### 1.4.0
 - improve titlebar colorisation for Windows 8/10
 - use dark window frame detection on Windows 8/10
