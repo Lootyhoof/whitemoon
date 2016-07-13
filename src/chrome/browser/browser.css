@@ -1523,10 +1523,8 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 
 .tab-close-button {
   -moz-appearance: none;
-  -moz-image-region: rect(0, 64px, 16px, 48px);
   border: none;
   padding: 0px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
 }
 
 .tab-close-button:-moz-lwtheme-brighttext {
@@ -1537,18 +1535,8 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-transform: scale(1.2);
 }
 
-.tab-close-button:hover,
-.tab-close-button:hover[selected="true"] {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.tab-close-button:hover:active,
-.tab-close-button:hover:active[selected="true"] {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-.tab-close-button[selected="true"] {
-  -moz-image-region: rect(0, 16px, 16px, 0);
+.tab-close-button:not([selected]):not(:hover):not(:active) {
+  -moz-image-region: rect(0, 64px, 16px, 48px);
 }
 
 .tab-close-button:focus {
