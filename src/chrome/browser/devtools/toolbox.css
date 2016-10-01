@@ -8,8 +8,6 @@
 
 #toolbox-controls > toolbarbutton,
 #toolbox-dock-buttons > toolbarbutton {
-  -moz-appearance: none;
-  border: none;
   margin: 0 4px;
   min-width: 16px;
   width: 16px;
@@ -39,25 +37,12 @@
   opacity: 1;
 }
 
-#toolbox-controls-separator {
-  width: 3px;
-  background-image: linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0)),
-                    linear-gradient(hsla(206,37%,4%,0), hsla(206,37%,4%,.6), hsla(206,37%,4%,0)),
-                    linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0));
-  background-size: 1px 100%;
-  background-repeat: no-repeat;
-  background-position: 0, 1px, 2px;
-  -moz-margin-start: 8px;
-}
-
-
 /* Command buttons */
 
 .command-button {
-  -moz-appearance: none;
-  border: none;
-  margin: 0;
   padding: 0 8px;
+  margin: 0;
+  border-width: 0;
   width: 16px;
 }
 
@@ -131,7 +116,9 @@
   -moz-appearance: none;
   background-image: url("background-noise-toolbar.png"),
                     linear-gradient(#303840, #2d3640);
-  border-bottom: 1px solid #060a0d;
+  border-color: #060a0d;
+  border-style: solid;
+  border-width: 1px 0;
   box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset,
               0 -1px 0 hsla(206,37%,4%,.1) inset;
   min-height: 32px;
@@ -140,6 +127,7 @@
 
 #toolbox-tabs {
   margin: 0;
+  border-left: 1px solid hsla(206,37%,4%,.45);
 }
 
 .devtools-tab {
@@ -155,7 +143,6 @@
   background-size: 1px 100%;
   background-repeat: no-repeat;
   background-position: left, right;
-  border-top: 1px solid #060a0d;
   border-right: 1px solid hsla(206,37%,4%,.45);
 }
 
@@ -167,6 +154,10 @@
 
 #toolbox-tab-options > image {
   margin: 0 8px;
+}
+
+.devtools-tab > label {
+  white-space: nowrap;
 }
 
 .devtools-tab:hover > image {
@@ -248,20 +239,20 @@
 }
 
 .options-vertical-pane {
-  margin: 15px;
+  margin: 5px;
   width: calc(50% - 30px);
   min-width: 400px;
   -moz-padding-start: 5px;
 }
 
 .options-vertical-pane > label {
-  padding: 5px 0;
+  padding: 2px 0;
   font-size: 1.4rem;
 }
 
 .options-groupbox {
   -moz-margin-start: 15px;
-  padding: 4px;
+  padding: 2px;
 }
 
 .options-groupbox > * {
@@ -279,4 +270,9 @@
 .options-citation-label + label {
   padding: 3px 0 0 !important; /* To align it with the checkbox */
   font-style: italic;
+}
+
+.hidden-labels-box:not(.visible) > label,
+.hidden-labels-box.visible ~ .hidden-labels-box > label:last-child {
+  display: none;
 }
