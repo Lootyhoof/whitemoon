@@ -726,20 +726,20 @@ div.CodeMirror span.eval-text {
 }
 
 .theme-dark .devtools-searchinput {
-  background-image: url(magnifying-glass.png);
+  background-image: url("chrome://browser/skin/devtools/magnifying-glass.png");
 }
 
 .theme-light .devtools-searchinput {
-  background-image: url(magnifying-glass-light.png);
+  background-image: url("chrome://browser/skin/devtools/magnifying-glass-light.png");
 }
 
 @media (min-resolution: 2dppx) {
   .theme-dark .devtools-searchinput {
-    background-image: url(magnifying-glass@2x.png);
+    background-image: url("chrome://browser/skin/devtools/magnifying-glass@2x.png");
   }
 
   .theme-light .devtools-searchinput {
-    background-image: url(magnifying-glass-light@2x.png);
+    background-image: url("chrome://browser/skin/devtools/magnifying-glass-light@2x.png");
   }
 }
 
