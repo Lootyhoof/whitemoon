@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.5.0
+- PM27: add statusbar styling
+- PM27: add styling for downloads panel components
+- PM27: style devtools
+- improve appearance of about:
+
 ### 1.4.1
 - fix tab close button icon
 
