@@ -130,13 +130,6 @@ toolbarbutton.bookmark-item > menupopup {
               -moz-linear-gradient(bottom, rgba(246,246,246,1), rgba(246,246,246,1));
 }
 
-
-
-
-#main-window {
-  -moz-binding: url("chrome://ostarget/skin/tab.xml#drawintitlebar");
-}
-
 #tabbrowser-tabs {
   margin: 0 3px;
 }
