@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.6.0
+- support PM27's devtools
+- drop PM26 support
+- style listbox/tree for multiple Windows versions
+
 ### 1.5.0
 - PM27: add statusbar styling
 - PM27: add styling for downloads panel components
