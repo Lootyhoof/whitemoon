@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.6.1
+- use password manager icons from upstream
+- make extension icons consistent
+
 ### 1.6.0
 - support PM27's devtools
 - drop PM26 support
