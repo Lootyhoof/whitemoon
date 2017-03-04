@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.6.3
+- use browser-defined tab widths
+
 ### 1.6.2
 - fix download animation
 - sync devtools styling with default
