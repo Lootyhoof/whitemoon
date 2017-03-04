@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.6.2
+- fix download animation
+- sync devtools styling with default
+- allow extensions to style their own toolbarbutton-badge
+
 ### 1.6.1
 - use password manager icons from upstream
 - make extension icons consistent
