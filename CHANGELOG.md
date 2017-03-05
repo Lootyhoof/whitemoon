@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.6.4
+- use more inverted icons where appropriate
+- use new icons for download buttons
+
 ### 1.6.3
 - use browser-defined tab widths
 
