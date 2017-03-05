@@ -576,10 +576,10 @@ menuitem.bookmark-item {
     }
     
     /* Win8/10 use very light inactive backgrounds, so use dark icons */
-    #toolbar-menubar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
-    #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
-    #nav-bar[tabsontop=false] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
-    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive {
+    #toolbar-menubar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
+    #TabsToolbar[tabsontop=true] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar[tabsontop=false] :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button):not(:-moz-lwtheme):-moz-window-inactive {
       list-style-image: url("chrome://browser/skin/Toolbar.png");
       opacity: 0.5;
     }
@@ -590,6 +590,33 @@ menuitem.bookmark-item {
     #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #alltabs-button:not(:-moz-lwtheme):-moz-window-inactive {
       list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.png");
       opacity: 0.5;
+    }
+    
+    #toolbar-menubar #new-tab-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #TabsToolbar[tabsontop=true] #new-tab-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar[tabsontop=false] #new-tab-button:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child #new-tab-button:not(:-moz-lwtheme):-moz-window-inactive {
+      list-style-image: url("chrome://browser/skin/tabbrowser/newtab.png");
+      opacity: 0.5;
+    }
+    
+    #TabsToolbar[tabsontop=true] > * > .tabbrowser-arrowscrollbox > .scrollbutton-up:not(:-moz-lwtheme):-moz-window-inactive,
+    #TabsToolbar[tabsontop=true] > * > .tabbrowser-arrowscrollbox > .scrollbutton-down:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child > * > .tabbrowser-arrowscrollbox > .scrollbutton-up:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child > * > .tabbrowser-arrowscrollbox > .scrollbutton-down:not(:-moz-lwtheme):-moz-window-inactive {
+      list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left.png");
+      opacity: 0.5;
+    }
+    
+    #toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #TabsToolbar[tabsontop=true] .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #TabsToolbar[tabsontop=true] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar[tabsontop=false] .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar[tabsontop=false] .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme):-moz-window-inactive,
+    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:not(:-moz-lwtheme):-moz-window-inactive {
+      list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png");
     }
   }
   
