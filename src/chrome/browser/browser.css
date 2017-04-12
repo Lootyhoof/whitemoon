@@ -67,7 +67,8 @@
 }
 
 #print-preview-toolbar:not(:-moz-lwtheme) {
-  -moz-appearance: toolbox;
+  -moz-appearance: none;
+  background-color: rgb(250, 250, 250);
 }
 
 /* ::::: app menu button ::::: */
