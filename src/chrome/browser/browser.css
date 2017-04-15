@@ -1728,7 +1728,7 @@ toolbar[brighttext] #alltabs-button[type="menu"] {
 }
 
 .tabs-closebutton:-moz-lwtheme-brighttext {
-  filter: url("chrome://global/skin/icons/invert.svg#invert");
+  filter: invert(100%);
 }
 
 .tabs-closebutton > .toolbarbutton-icon {
@@ -2322,7 +2322,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 }
 
 #addonbar-closebutton:-moz-lwtheme-brighttext {
-  filter: url("chrome://global/skin/icons/invert.svg#invert");
+  filter: invert(100%);
 }
 
 .statuspanel-label {

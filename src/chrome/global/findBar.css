@@ -41,7 +41,7 @@ findbar[hidden] {
 }
 
 .findbar-closebutton:-moz-lwtheme-brighttext {
-  filter: url("chrome://global/skin/icons/invert.svg#invert");
+  filter: invert(100%);
 }
 
 /* Search field */
