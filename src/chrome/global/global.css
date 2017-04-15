@@ -8,22 +8,14 @@
 
 /* all localizable skin settings shall live here */
 @import url("chrome://global/locale/intl.css");
+@import url("chrome://os/skin/global.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: XBL bindings ::::: */
 
-radio {
-  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
-}
-
-menulist > menupopup,
-.menulist-menupopup {
+menulist > menupopup {
   -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
-}
-
-.menulist-compact {
-  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
 }
 
 /* ::::: root elements ::::: */
@@ -33,8 +25,6 @@ page,
 dialog,
 wizard,
 prefwindow {
-  -moz-appearance: window;
-  background-color: #F8F8F8;
   color: -moz-DialogText;
   font: message-box;
 }
@@ -48,14 +38,6 @@ window.dialog {
 }
 
 /* ::::: alert icons :::::*/
-
-.message-icon,
-.alert-icon,
-.error-icon,
-.question-icon {
-  width: 32px;
-  height: 32px;
-}
 
 .message-icon {
   list-style-image: url("chrome://global/skin/icons/information-16.svg");
@@ -83,73 +65,6 @@ iframe {
   min-height: 10px;
 }
 
-/* ::::: statusbar ::::: */
-
-statusbar {
-  -moz-appearance: statusbar;
-  border-top: 1px solid ThreeDLightShadow;
-  border-left: 1px solid ThreeDShadow;
-  border-right: 1px solid ThreeDHighlight;
-  border-bottom: 1px solid ThreeDHighlight;
-  background-color: #F7F7F7;
-  min-height: 22px;
-}
-
-statusbarpanel {
-  -moz-appearance: statusbarpanel;
-  -moz-box-align: center;
-  -moz-box-pack: center;
-  border-left: 1px solid ThreeDHighlight;
-  border-top: 1px solid ThreeDHighlight;
-  border-right: 1px solid ThreeDShadow;
-  border-bottom: 1px solid ThreeDShadow;
-  padding: 0 4px;
-}
-
-statusbarpanel:not(.statusbar-resizerpanel):-moz-lwtheme {
-  -moz-appearance: none;
-  border-top-style: none;
-  border-bottom-style: none;
-  -moz-border-start-style: none;
-}
-
-.statusbar-resizerpanel {
-  -moz-box-align: end;
-  -moz-box-pack: end;
-  -moz-appearance: resizerpanel;
-  padding: 0;
-  border: none;
-}
-
-.statusbarpanel-iconic,
-.statusbarpanel-iconic-text,
-.statusbarpanel-menu-iconic {
-  padding: 0 1px;
-}
-
-/* XXXBlake yeah, shoot me -- these don't belong here.  I'll move them later. */
-
-sidebarheader {
-  height: 25px;
-  background-color: #F7F7F7;
-  -moz-appearance: toolbox;
-  border-bottom: 1px solid ThreeDShadow;
-  border-top: 1px solid ThreeDHighlight;
-}
-
-sidebarheader > label {
-  -moz-padding-start: 4px;
-}
-
-.toolbar-focustarget {
-  -moz-user-focus: ignore !important;
-}
-
-toolbar[mode="text"] .toolbarbutton-text {
-  padding: 0 !important;
-  margin: 3px 5px !important;
-}
-
 /* ::::: miscellaneous formatting ::::: */
 
 :root:-moz-lwtheme,
@@ -158,18 +73,11 @@ toolbar[mode="text"] .toolbarbutton-text {
 }
 
 :root:-moz-lwtheme-darktext {
-  text-shadow: 1px 1px 1.5px white;
+  text-shadow: 0 -0.5px 1.5px white;
 }
 
 :root:-moz-lwtheme-brighttext {
   text-shadow: 1px 1px 1.5px black;
-}
-
-statusbar:-moz-lwtheme,
-sidebarheader:-moz-lwtheme {
-  -moz-appearance: none;
-  background: none;
-  border-style: none;
 }
 
 .inset {
@@ -178,6 +86,7 @@ sidebarheader:-moz-lwtheme {
   border-bottom-color: ThreeDHighlight;
   margin: 0 5px 5px;
 }
+  
 
 .outset {
   border: 1px solid ThreeDShadow;
@@ -185,7 +94,7 @@ sidebarheader:-moz-lwtheme {
   border-top-color: ThreeDHighlight;
 }
 
-/* separators */
+
 separator:not([orient="vertical"]) {
   height: 1.5em;
 }
@@ -195,30 +104,12 @@ separator[orient="vertical"] {
 
 separator.thin:not([orient="vertical"]) {
   height: 0.5em;
-}
+}  
+
 separator.thin[orient="vertical"] {
   width: 0.5em;
 }
-
-separator.groove:not([orient="vertical"]) {
-  border-top: 1px solid ThreeDShadow;
-  border-bottom: 1px solid ThreeDHighlight;
-  height: 0;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-}
-separator.groove[orient="vertical"] {
-  border-left: 1px solid ThreeDShadow;
-  border-right: 1px solid ThreeDHighlight;
-  width: 0;
-  margin-left: 0.4em;
-  margin-right: 0.4em;
-}
-
-.small-margin {
-  margin: 1px 2px;
-}
-
+    
 .plain {
   -moz-appearance: none;
   margin: 0 !important;
@@ -229,10 +120,6 @@ separator.groove[orient="vertical"] {
 description,
 label {
   cursor: default;
-  margin-top: 1px;
-  margin-bottom: 2px;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 5px;
 }
 
 description {
@@ -241,11 +128,6 @@ description {
 
 label[disabled="true"] {
   color: GrayText;
-}
-
-label[disabled="true"]:-moz-system-metric(windows-classic) {
-  color: ThreeDShadow;
-  text-shadow: 1px 1px ThreeDHighlight;
 }
 
 .tooltip-label {
@@ -278,16 +160,11 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 
 .text-link {
   color: -moz-nativehyperlinktext;
-  border: 1px solid transparent;
   cursor: pointer;
 }
 
 .text-link:hover {
   text-decoration: underline;
-}
-
-.text-link:-moz-focusring {
-  border: 1px dotted -moz-DialogText;
 }
 
 /* :::::: autoscroll popup ::::: */

@@ -2,8 +2,6 @@ skin abouthome whitemoon chrome/abouthome/
 skin browser whitemoon chrome/browser/
 skin mozapps whitemoon chrome/mozapps/
 skin global whitemoon chrome/global/
-skin global-general whitemoon chrome/global/ os=Darwin
-skin global whitemoon chrome/global-darwin/ os=Darwin
-skin ostarget whitemoon chrome/ostarget/general/
-skin ostarget whitemoon chrome/ostarget/aero/ os=WINNT osversion>=6
-skin ostarget whitemoon chrome/ostarget/darwin/ os=Darwin
+skin os whitemoon chrome/os/darwin/ os=Darwin
+skin os whitemoon chrome/os/linux/ os=Linux
+skin os whitemoon chrome/os/winnt/ os=WINNT

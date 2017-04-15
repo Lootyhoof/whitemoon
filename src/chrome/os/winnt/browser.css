@@ -1,0 +1,28 @@
+/* ::::: bookmark buttons ::::: */
+
+toolbarbutton.bookmark-item {
+  margin: 0;
+  padding: 2px 3px;
+}
+
+toolbarbutton.bookmark-item:hover:active:not([disabled="true"]),
+toolbarbutton.bookmark-item[open="true"] {
+  padding-top: 3px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 2px;
+}
+
+.bookmark-item:not(#bookmarks-menu-button) > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+.bookmark-item > .toolbarbutton-text {
+  display: -moz-box !important;
+}
+
+.bookmark-item > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
