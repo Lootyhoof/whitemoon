@@ -5,14 +5,14 @@
 
 #warningScreen
 {
-  background-color: -moz-Dialog;
+  background-color: #f0f0f0;
 }
 
 #warningBox
 {
-  background-color: -moz-Field;
-  color: -moz-FieldText;
-  border: 1px solid ThreeDShadow;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e1e1e1;
   border-radius: 10px;
   padding: 3em;
   -moz-padding-start: 30px;
@@ -29,7 +29,7 @@
 {
   margin: 0 0 .6em 0;
   font-size: 160%;
-  border-bottom: 1px solid ThreeDLightShadow
+  border-bottom: 1px solid #e3e3e3;
 }
 
 #warningText

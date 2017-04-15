@@ -3,18 +3,18 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 html {
-  background: -moz-Dialog;
+  background: #f0f0f0;
   padding: 0 1em;
   font: message-box;
 }
 
 body {
-  color: -moz-FieldText;
+  color: #000000;
   position: relative;
   min-width: 330px;
   max-width: 50em;
   margin: 4em auto;
-  border: 1px solid ThreeDShadow;
+  border: 1px solid #e1e1e1;
   border-radius: 10px;
   padding: 3em;
   -moz-padding-start: 30px;
