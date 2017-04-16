@@ -1685,7 +1685,7 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
 }
 
 .tab-close-button:not([selected]):not(:hover):not(:active) {
-  list-style-image: url("chrome://global/skin/icons/close.svg#disabled");
+  opacity: 0.4;
 }
 
 .tab-close-button:focus {
