@@ -1,5 +1,20 @@
 # Changelog
 
+### 2.0.0
+- add about:home styling for Home Styler
+- add theme-native icons for statusbar options window
+- make dialog icons consistent with other icons
+- use theme-native print preview window and icon stylings
+- add theme-native directory listing icons
+- make about: pages be consistent with the network error page styling
+- add new SSL warning icon
+- use new blacklisted site icon
+- unify platform stylings
+- add new padlock icons
+- add new activity monitor icons
+- adjust tab corners
+- cleanup
+
 ### 1.6.4
 - use more inverted icons where appropriate
 - use new icons for download buttons
