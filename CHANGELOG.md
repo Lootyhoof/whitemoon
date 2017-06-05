@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.0
+- sync about:support styling with default
+- sync about:permissions styling with default
+- fix "learn more" links in notification popups
+- macOS: fix bookmark favicons
+
 ### 2.0.0
 - add about:home styling for Home Styler
 - add theme-native icons for statusbar options window
