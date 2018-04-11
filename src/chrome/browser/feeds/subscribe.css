@@ -8,7 +8,7 @@ html {
 }
 
 #feedBody {
-  border: 1px solid THreeDShadow;
+  border: 1px solid ThreeDShadow;
   padding: 3em;
   -moz-padding-start: 30px;
   margin: 2em auto;
@@ -36,16 +36,10 @@ html {
   display: none;
 }
 
-.feedBackground {
-  background: url("chrome://browser/skin/feeds/feedIcon.png") 0% 10% no-repeat InfoBackground;
-}
-
-.videoPodcastBackground {
-  background: url("chrome://browser/skin/feeds/videoFeedIcon.png") 0% 10% no-repeat InfoBackground;
-}
-
+.feedBackground,
+.videoPodcastBackground,
 .audioPodcastBackground {
-  background: url("chrome://browser/skin/feeds/audioFeedIcon.png") 0% 10% no-repeat InfoBackground;
+  background: url("chrome://browser/skin/feeds/feedIcon.svg") 0% 10% no-repeat InfoBackground;
 }
 
 #feedHeader[dir="rtl"] {
@@ -147,7 +141,7 @@ a[href] img {
 }
 
 .enclosures {
-  border: 1px solid THreeDShadow;
+  border: 1px solid ThreeDShadow;
   padding: 1em;
   margin: 1em auto;
   background: -moz-Dialog;

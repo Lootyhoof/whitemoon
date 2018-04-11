@@ -130,19 +130,19 @@
 .addon-icon {
   height: 16px;
   width: 16px;
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric-16.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#extensionGeneric");
 }
 
 .addon-icon[type="theme"] {
-  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric-16.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#themeGeneric");
 }
 
 .addon-icon[type="plugin"] {
-  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric-16.png");
+  list-style-image: url("chrome://mozapps/skin/plugins/addons.svg#pluginGeneric");
 }
 
 .addon-icon[type="dictionary"] {
-  list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric-16.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#dictionaryGeneric");
 }
 
 .action-list {
@@ -162,7 +162,7 @@
 .addon:not([active]) .addon-icon,
 #disable-list .addon-icon,
 #incompatible-list .addon-icon {
-  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+  filter: grayscale(100%);
 }
 
 #footer {

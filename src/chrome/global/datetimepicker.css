@@ -99,49 +99,49 @@ timepicker[disabled="true"] {
 }
 
 .datepicker-previous {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft");
 }
 
 .datepicker-next {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit");
 }
 
 .datepicker-previous:hover {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft-hov.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft-hov");
 }
 
 .datepicker-next:hover {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit-hov.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit-hov");
 }
 
 .datepicker-previous[disabled="true"] {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft-dis.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft-dis");
 }
 
 .datepicker-next[disabled="true"] {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit-dis.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit-dis");
 }
 
 .datepicker-previous:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit");
 }
 
 .datepicker-next:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft");
 }
 
 .datepicker-previous:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit-hov.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit-hov");
 }
 
 .datepicker-next:-moz-locale-dir(rtl):hover {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft-hov.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft-hov");
 }
 
 .datepicker-previous[disabled="true"]:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://global/skin/arrow/arrow-rit-dis.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit-dis");
 }
 
 .datepicker-next[disabled="true"]:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://global/skin/arrow/arrow-lft-dis.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#lft-dis");
 }

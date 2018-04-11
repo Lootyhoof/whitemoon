@@ -5,7 +5,7 @@
      y="0"
      width="11"
      height="14"
-     viewBox="0 0 11 14">#1796DD
+     viewBox="0 0 11 14">
   <style>
     use:not(:target) {
       display: none;

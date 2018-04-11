@@ -39,7 +39,7 @@
   padding: 9px 5px 8px;
   width: auto;
   height: auto;
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn-sharp.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
 }
 
 .popup-notification-menubutton:-moz-focusring > .button-menubutton-dropmarker {

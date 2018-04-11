@@ -11,12 +11,12 @@
   -moz-appearance: none;
   border: none;
   padding: 3px 5px 3px 3px !important;
-  list-style-image: url("chrome://browser/skin/appmenu.png");
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg");
   -moz-image-region: auto;
 }
 
 toolbar[brighttext] #appmenu-toolbar-button {
-  list-style-image: url("chrome://browser/skin/appmenu-inverted.png");
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg#brighttext");
 }
 
 #appmenu-toolbar-button > label,

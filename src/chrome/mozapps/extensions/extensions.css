@@ -8,25 +8,20 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
-
-.nav-button {
-  list-style-image: url(chrome://mozapps/skin/extensions/navigation.png);
-}
-
 #forward-btn {
   -moz-border-start: none;
 }
 
 #back-btn:-moz-locale-dir(ltr),
 #forward-btn:-moz-locale-dir(rtl) {
-  -moz-image-region: rect(0, 18px, 18px, 0);
+  list-style-image: url("chrome://browser/skin/toolbar/back.svg");
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #back-btn:-moz-locale-dir(rtl),
 #forward-btn:-moz-locale-dir(ltr) {
-  -moz-image-region: rect(0, 36px, 18px, 18px);
+  list-style-image: url("chrome://browser/skin/toolbar/forward.svg");
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -46,9 +41,7 @@
 }
 
 #addons-page[warning] .global-warning-container {
-  background-color: rgba(255, 255, 0, 0.1);
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png");
-  background-repeat: repeat-x;
+  background-image: linear-gradient(transparent, rgba(255, 255, 0, 0.1));
 }
 
 #detail-view .global-warning {
@@ -86,33 +79,21 @@
 /*** notification icons ***/
 
 .warning-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-warning.png");
-  width: 16px;
-  height: 15px;
-  margin: 3px 0;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-warning.svg");
 }
 
 .error-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png");
-  width: 16px;
-  height: 15px;
-  margin: 3px 0;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.svg");
 }
 
 .pending-icon,
 .info-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-positive.png");
-  width: 16px;
-  height: 15px;
-  margin: 3px 0;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-positive.svg");
 }
 
 .addon-view[pending="disable"] .pending-icon,
 .addon-view[pending="uninstall"] .pending-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
-  width: 16px;
-  height: 15px;
-  margin: 3px 0;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.svg");
 }
 
 
@@ -328,7 +309,7 @@
 }
 
 #header-utils-btn {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg");
   -moz-margin-end: 16px;
 }
 
@@ -371,11 +352,11 @@
 }
 
 .sorter[checkState="1"] {
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
 }
 
 .sorter[checkState="2"] {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#up");
 }
 
 .sorter .button-icon {
@@ -608,7 +589,7 @@
   font-weight: bold;
   -moz-box-direction: reverse;
   cursor: pointer;
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
 }
 
 .addon .relnotes-toggle > .button-box > .button-icon {
@@ -616,7 +597,7 @@
 }
 
 .addon[show-relnotes] .relnotes-toggle {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#up");
 }
 
 /*.addon[active="false"] {
@@ -630,35 +611,30 @@
   color: #AAA;
 }
 
+.addon-view[notification],
+.addon-view[pending] {
+  --view-highlight-color: transparent;
+  background-image: radial-gradient(at 50% 0%,
+                                    var(--view-highlight-color) 0%,
+                                    transparent 75%);
+}
 .addon-view[notification="warning"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    linear-gradient(rgba(255, 255, 0, 0.04),
-                                    rgba(255, 255, 0, 0));
-  background-repeat: repeat-x;
+  --view-highlight-color: #F9F5E5;
 }
 
 .addon-view[notification="error"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    linear-gradient(rgba(255, 0, 0, 0.04),
-                                    rgba(255, 0, 0, 0));
-  background-repeat: repeat-x;
+  --view-highlight-color: #FFE8E9;
 }
 
 .addon-view[pending="enable"],
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    linear-gradient(rgba(0, 255, 0, 0.04),
-                                    rgba(0, 255, 0, 0));
-  background-repeat: repeat-x;
+  --view-highlight-color: #EFFAF2;
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
-  background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    linear-gradient(rgba(128, 128, 128, 0.04),
-                                    rgba(128, 128, 128, 0));
-  background-repeat: repeat-x;
+  --view-highlight-color: #F2F2F2;
 }
 
 .addon[selected] {

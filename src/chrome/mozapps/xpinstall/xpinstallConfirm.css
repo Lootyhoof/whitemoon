@@ -37,7 +37,7 @@ installitem {
 }
 
 .alert-icon {
-  list-style-image: url("chrome://global/skin/icons/warning-large.png");
+  list-style-image: url("chrome://global/skin/icons/warning.svg");
   width: 48px;
   height: 48px;
   -moz-margin-end: 20px;
@@ -79,21 +79,21 @@ installitem {
 .xpinstallItemIcon {
   max-width: 32px;
   max-height: 32px;
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#extensionGeneric");
 }
 
 installitem[type="theme"] .xpinstallItemIcon {
-  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#themeGeneric");
 }
 
 installitem[type="locale"] .xpinstallItemIcon {
-  list-style-image: url("chrome://mozapps/skin/extensions/localeGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#localeGeneric");
 }
 
 installitem[type="plugin"] .xpinstallItemIcon {
-  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#pluginGeneric");
 }
 
 installitem[type="dictionary"] .xpinstallItemIcon {
-  list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/addons.svg#dictionaryGeneric");
 }
