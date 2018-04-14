@@ -1663,28 +1663,24 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 
 /* ::::: Identity Indicator Styling ::::: */
 
-
+/* Popup Icons */
 #identity-popup-icon {
-  height: 64px;
-  width: 64px;
+  height: 32px;
+  width: 32px;
   padding: 0;
-  list-style-image: url("chrome://browser/skin/identity.png");
-  -moz-image-region: rect(0px, 64px, 64px, 0px);
+  margin: 6px 6px 0 10px;
+  list-style-image: url("chrome://browser/skin/identity-not-secure.svg");
 }
 
 #identity-popup.verifiedDomain > #identity-popup-container > #identity-popup-icon {
-  -moz-image-region: rect(64px, 64px, 128px, 0px);
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg");
 }
 
 #identity-popup.verifiedIdentity > #identity-popup-container > #identity-popup-icon {
-  -moz-image-region: rect(128px, 64px, 192px, 0px);
+  list-style-image: url("chrome://browser/skin/identity-secure.svg");
 }
 
-#identity-popup.chromeUI > #identity-popup-container > #identity-popup-icon {
-  list-style-image: url("chrome://branding/content/icon64.png");
-}
-
-
+/* Popup Body Text */
 .identity-popup-description {
   white-space: pre-wrap;
   -moz-padding-start: 15px;
@@ -1732,7 +1728,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
-  list-style-image: url("chrome://browser/skin/Secure24.png");
+  padding: 12px;
 }
 
 #identity-popup-help-icon {
