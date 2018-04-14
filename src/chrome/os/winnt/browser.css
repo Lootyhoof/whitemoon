@@ -1,3 +1,76 @@
+:root {
+  --appmenu-background: rgba(235,235,235,.75);
+  --appmenu-border-color: rgba(0,0,0,.15);
+}
+
+/* ::::: app menu button ::::: */
+
+#appmenu-button {
+  -moz-appearance: none;
+  background: var(--appmenu-background);
+  background-clip: padding-box;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid var(--appmenu-border-color);
+  border-top: none;
+  font-weight: bold;
+  box-shadow: none;
+  padding: 0 1.5em .05em;
+  margin: 0 0 2px;
+}
+
+@media (-moz-windows-classic) {
+  #appmenu-button {
+    margin-bottom: 1px;
+  }
+}
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button {
+  --appmenu-background: linear-gradient(rgba(15,15,15,.85),rgba(15,15,15,.85));
+  --appmenu-border-color: rgba(43,43,43,.9);
+  color: white;
+}
+
+#appmenu-button:hover:not(:active):not([open]) {
+  --appmenu-background: rgba(240,240,240,.85);
+  --appmenu-border-color: rgba(0,0,0,.20);
+}
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button:hover:not(:active):not([open]) {
+  --appmenu-background: linear-gradient(rgba(20,20,20,.75),rgba(20,20,20,.75));
+  color: white;
+}
+
+#appmenu-button:hover:active,
+#appmenu-button[open] {
+  border-radius: 0;
+  --appmenu-background: rgba(255,255,255,.4);
+  --appmenu-border-color: rgba(0,0,0,.25);
+}
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button:hover:active,
+#main-window[privatebrowsingmode=temporary] #appmenu-button[open] {
+  --appmenu-background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4));
+  color: white;
+}
+
+#appmenu-button > .button-box {
+  border-style: none;
+  padding: 0;
+}
+
+#appmenu-button > .button-box > .button-menu-dropmarker {
+  list-style-image: url(chrome://browser/skin/toolbarbutton-dropdown-arrow.svg);
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  -moz-margin-start: .5em;
+}
+
+#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .button-menu-dropmarker {
+  list-style-image: url(chrome://browser/skin/toolbarbutton-dropdown-arrow.svg#brighttext);
+}
+
 /* ::::: titlebar ::::: */
 
 #main-window[sizemode="normal"] > #titlebar {
@@ -81,7 +154,7 @@ toolbarbutton.bookmark-item[open="true"] {
   display: none;
 }
 
-@media not all and (-moz-windows-classic) {
+@media (-moz-windows-glass) {
   #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
     margin-top: 1px;
   }
@@ -112,8 +185,6 @@ toolbarbutton.bookmark-item[open="true"] {
   #addon-bar:not(:-moz-lwtheme) {
     background-color: rgb(250,250,250);
   }
-
-  
 
   #sidebar-splitter {
     border: 0;
