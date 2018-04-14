@@ -6,6 +6,7 @@ skin os whitemoon chrome/os/darwin/ os=Darwin
 skin os whitemoon chrome/os/linux/ os=Linux
 skin os whitemoon chrome/os/winnt/ os=WINNT
 
+override chrome://browser/skin/page-livemarks.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/audioFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/feedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/videoFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
