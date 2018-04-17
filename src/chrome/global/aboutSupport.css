@@ -2,16 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-html {
-  background-color: -moz-Field;
-  color: -moz-FieldText;
-  font: message-box;
-}
+@import url("chrome://global/skin/about.css");
 
-body {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+body{
+  max-width: 90em;
+  padding: 3em 30px;
 }
 
 .page-subtitle {
@@ -33,20 +28,22 @@ table {
   text-align: start;
   width: 100%;
   border: 1px solid ThreeDShadow;
+  border-width: 1px 0 0 1px;
   border-spacing: 0px;
 }
 
 th, td {
-  border: 1px dotted ThreeDShadow;
+  border: 1px solid ThreeDShadow;
   padding: 3px;
+  border-width: 0 1px 1px 0;
+  text-align: start;
 }
 
-thead th {
+thead > tr > th {
   text-align: center;
 }
 
 th {
-  text-align: start;
   background-color: Highlight;
   color: HighlightText;
 }
@@ -54,11 +51,6 @@ th {
 th.column {
   white-space: nowrap;
   width: 0px;
-}
-
-td {
-  text-align: start;
-  border-top: 1px dotted ThreeDShadow;
 }
 
 .prefs-table {
@@ -78,7 +70,8 @@ td {
   overflow: hidden;
 }
 
-#action-box {
+body > #reset-box, /* Firefox 37 and prior  --johnGraciliano */
+#action-box {      /* Firefox 38 and latter --johnGraciliano */
   background-color: -moz-Dialog;
   border: 1px solid ThreeDShadow;
   color: -moz-DialogText;
@@ -87,21 +80,26 @@ td {
   margin-bottom: 20px;
   -moz-margin-start: 20px;
   -moz-margin-end: 0;
+  margin-inline-start: 20px;
+  margin-inline-end: 0;
   padding: 16px;
   width: 30%;
 }
-
-#contents {
-  clear: right;
+body > #reset-box{
+  visibility: hidden;
 }
 
 #action-box,
-#reset-box,
+#action-box #reset-box,
 #safe-mode-box {
   display: none;
 }
 
-#action-box:-moz-dir(rtl) {
+body > #reset-box:-moz-dir(rtl), /* Firefox 37 and earlier */
+#action-box:-moz-dir(rtl) {      /* Firefox 38 and later */
+  float: left;
+}
+#action-box:dir(rtl) {
   float: left;
 }
 
@@ -109,7 +107,8 @@ td {
   margin-top: 0;
 }
 
-#action-box button {
+#reset-box > button, /* Firefox 37 and earlier */
+#action-box button { /* Firefox 38 and later */
   display: block;
 }
 
@@ -124,4 +123,57 @@ td {
 
 .hidden {
   display: none;
+}
+
+@supports (writing-mode:horizontal-tb) { /* Firefox >= 41 */
+  html {
+    --aboutSupport-table-background: #ebebeb;
+    background-color: var(--in-content-frame-background);
+  }
+  body {
+    background-color: var(--in-content-page-background);
+    color: black;
+    border-color: var(--in-content-main-border-color);
+  }
+  #action-box{
+    background-color: var(--aboutSupport-table-background);
+    border-color: var(--in-content-border-color);
+    color: var(--in-content-text-color);
+  }
+  table{
+    background-color: var(--aboutSupport-table-background);
+    color: var(--in-content-text-color);
+    border: 1px solid var(--in-content-border-color);
+  }
+  th {
+    background-color: var(--in-content-table-header-background);
+    color: var(--in-content-selected-text);
+    border-color: var(--in-content-border-color);
+  }
+  td {
+    border-color: var(--in-content-table-border-dark-color);
+  }
+  th,td{
+    border-width: 0;
+  }
+  th:not(:last-child),
+  td:not(:last-child){
+    -moz-border-end-width: 1px;
+    border-inline-end-width: 1px;
+  }
+  tr:not(:last-child) > th,
+  tr:not(:last-child) > td{
+    border-bottom-width: 1px;
+  }
+  thead + tbody > tr:first-child > td{
+    border-top:  1px solid var(--in-content-border-color);
+  }
+  table button {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 1px;
+    height: auto;
+    min-height: unset;
+    line-height: normal;
+  }
 }

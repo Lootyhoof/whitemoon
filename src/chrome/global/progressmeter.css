@@ -13,31 +13,53 @@
 progressmeter {
   -moz-appearance: progressbar;
   margin: 2px 4px;
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDShadow -moz-Dialog;
-  -moz-border-right-colors: ThreeDHighlight -moz-Dialog;
-  -moz-border-bottom-colors: ThreeDHighlight -moz-Dialog;
-  -moz-border-left-colors: ThreeDShadow -moz-Dialog;
-  background-color: -moz-Dialog;
   min-width: 128px;
-  min-height: 15px;
+  height: 12px;
 }
 
-.progress-bar 
-{
-  -moz-appearance: progresschunk;
-  min-width: 0px;
-  background-color: ThreeDShadow;
+.progress-remainder[flex="100"], .progress-remainder[flex="0"] {
+  background-image: none !important;
+  -moz-appearance: none;
 }
-
-/* ::::: statusbar progressmeter ::::: */
 
 .progressmeter-statusbar {
   margin: 0;
-  border: 0px;
-  -moz-border-top-colors: ThreeDHighlight -moz-Dialog;
-  -moz-border-right-colors: ThreeDShadow -moz-Dialog;
-  -moz-border-bottom-colors: ThreeDShadow -moz-Dialog;
-  -moz-border-left-colors: ThreeDHighlight -moz-Dialog;
-  min-width: 96px;
+  border-width: 1px;
+}
+
+/*
+ *
+ * The above codes are imported from Firefox for OS X
+   Codes below are added by me to stylize progress bar - Louis */
+
+progressmeter {
+  -moz-appearance: none;
+}
+progressmeter > .progress-bar {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  background-clip: padding-box, border-box;
+  background-color: #24baf2;
+  border-radius: 2px 0 0 2px;
+}
+progressmeter > .progress-remainder {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  background-color: #ddd;
+  -moz-border-start: none;
+  border-inline-start: none;
+  border-radius: 0 2px 2px 0;
+}
+progressmeter[mode="undetermined"] > .progress-bar {
+  background-image: linear-gradient(-45deg, transparent 25%, rgba(255,255,255,.5) 25%, rgba(255,255,255,.5) 50%, transparent 50%, transparent 75%, rgba(255,255,255,.5) 75%);
+  animation: movestrip 1.5s linear infinite;
+  background-color: #ddd;
+  background-size: 50px 50px;
+  border-radius: 2px;
+}
+progressmeter[value="0"] > .progress-remainder,
+progressmeter[value="100"] > .progress-bar{
+  border-radius: 2px;
 }
