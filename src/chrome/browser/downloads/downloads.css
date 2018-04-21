@@ -218,7 +218,7 @@ toolbar[brighttext] #downloads-indicator-icon {
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+  background-image: url("chrome://browser/skin/toolbar/downloads.svg#highlight");
 }
 
 /* In the next few rules, we use :not([counter]) as a shortcut that is
@@ -231,7 +231,7 @@ toolbar[brighttext] #downloads-indicator-icon {
 }
 
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+  background-image: url("chrome://browser/skin/toolbar/downloads.svg#highlight");
 }
 
 /*** Download notifications ***/
