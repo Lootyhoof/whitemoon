@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.0.0
+- replace many icons with vectors (from Simple White X)
+- revise identity panel styling
+- use new progressmeter styling (from Simple White)
+- draw a background on Win10 for better accent color detection
+- preserve add-on bar close button in text mode
+- sync devtools styling with default
+- add preliminary Pale Moon 28 support
+- major cleanup
+
 ### 2.1.0
 - sync about:support styling with default
 - sync about:permissions styling with default
