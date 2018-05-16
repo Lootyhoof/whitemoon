@@ -1,5 +1,10 @@
 # Changelog
 
+### 3.0.1
+- add theme change notification
+- PM28: add notification settings icon
+- PM28: sync reader/narrate styling with default
+
 ### 3.0.0
 - replace many icons with vectors (from Simple White X)
 - revise identity panel styling
