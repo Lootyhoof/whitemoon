@@ -1781,6 +1781,12 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   height: 32px;
 }
 
+.popup-notification-icon[popupid="addon-theme-change"] {
+  list-style-image: url(chrome://mozapps/skin/extensions/addons.svg#themeGeneric);
+  width: 32px;
+  height: 32px;
+}
+
 .popup-notification-icon[popupid="click-to-play-plugins"] {
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
