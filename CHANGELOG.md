@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.0.2
+- Linux: style menubar in lwthemes
+
 ### 3.0.1
 - add theme change notification
 - PM28: add notification settings icon
