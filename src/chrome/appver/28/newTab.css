@@ -169,6 +169,7 @@
   width: 10px;
   margin-left: 8px;
   margin-top: 6px;
+  opacity: .4;
 }
 
 .newtab-site[pinned] .newtab-title:dir(rtl)::before {
