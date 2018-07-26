@@ -1273,6 +1273,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: #666;
 }
 
+.browserContainer > findbar {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-shadow: none;
+}
+
+.browserContainer > findbar > * > * > .findbar-closebutton:-moz-lwtheme {
+  filter: none;
+}
+
 /* ::::: throbber ::::: */
 
 #navigator-throbber {
