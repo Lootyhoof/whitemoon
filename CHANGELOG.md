@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.1.0
+- add PM28 newtab styling
+- add tabbrowser findbar styling
+- improve about:permissions sizing
+- fix disappearing titlebar in private and lwtheme modes on macOS
+
 ### 3.0.2
 - Linux: style menubar in lwthemes
 
