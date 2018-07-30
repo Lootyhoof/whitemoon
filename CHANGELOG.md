@@ -5,6 +5,7 @@
 - add tabbrowser findbar styling
 - improve about:permissions sizing
 - fix disappearing titlebar in private and lwtheme modes on macOS
+- add private browsing indicator on Linux/macOS
 
 ### 3.0.2
 - Linux: style menubar in lwthemes
