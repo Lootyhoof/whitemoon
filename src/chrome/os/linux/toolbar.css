@@ -1,3 +1,11 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== toolbar.css ====================================================
+  == Styles used by XUL toolbar-related elements.
+  ======================================================================= */
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: toolbox ::::: */
@@ -17,6 +25,7 @@ toolbar {
 
 menubar, toolbar[type="menubar"] {
   -moz-appearance: menubar;
+  color: -moz-menubartext;
   min-width: 1px;
   min-height: 20px;
   padding: 1px 0px;
@@ -25,6 +34,7 @@ menubar, toolbar[type="menubar"] {
 menubar:-moz-lwtheme,
 toolbar:-moz-lwtheme {
   -moz-appearance: none;
+  color: inherit;
 }
 
 /* in browser.xul, the menubar is inside a toolbar... */
@@ -35,7 +45,7 @@ toolbaritem > menubar {
 /* ::::: toolbar decorations ::::: */
 
 toolbarseparator {
-  -moz-appearance: separator !important;
+  -moz-appearance: separator;
   margin : 0;
   border: 0;
   min-width: 2px;
@@ -48,20 +58,13 @@ toolbarspacer {
 /* ::::: toolbarpaletteitem ::::: */
 
 toolbarpaletteitem {
-  cursor: -moz-grab;
+  cursor: grab;
 }
 
 .toolbarpaletteitem-box[type="spacer"],
 .toolbarpaletteitem-box[type="spring"] {
   border: 1px solid #808080;
   background-color: #FFF !important;
-}
-
-toolbarpaletteitem[place="toolbar"] {
-  margin-left: -2px;
-  margin-right: -2px;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
 }
 
 toolbarpaletteitem[place="toolbar"] > toolbarspacer {
@@ -72,8 +75,8 @@ toolbarpaletteitem[place="toolbar"] > toolbarspacer {
 .toolbarpaletteitem-box[type="spring"][place="toolbar"] {
   margin-top: 2px;
   margin-bottom: 2px;
-  -moz-margin-start: 0px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
 }
 
 .toolbarpaletteitem-box[type="separator"][place="palette"] {
@@ -93,6 +96,13 @@ toolbarpaletteitem[place="toolbar"] > toolbarspacer {
 }
 
 /* ..... drag and drop feedback ..... */
+
+toolbarpaletteitem[place="toolbar"] {
+  margin-left: -2px;
+  margin-right: -2px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
 
 toolbarpaletteitem[dragover="left"] {
   border-left-color: #000000;
