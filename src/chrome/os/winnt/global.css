@@ -58,7 +58,7 @@ statusbarpanel:not(.statusbar-resizerpanel):-moz-lwtheme {
   -moz-appearance: none;
   border-top-style: none;
   border-bottom-style: none;
-  -moz-border-start-style: none;
+  border-inline-start-style: none;
 }
 
 .statusbar-resizerpanel {
@@ -86,7 +86,7 @@ sidebarheader {
 }
 
 sidebarheader > label {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 .toolbar-focustarget {
@@ -140,8 +140,8 @@ description,
 label {
   margin-top: 1px;
   margin-bottom: 2px;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 6px;
+  margin-inline-end: 5px;
 }
 
 .text-link {

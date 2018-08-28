@@ -48,7 +48,7 @@ progressmeter > .progress-remainder {
   min-width: 0;
   min-height: 0;
   background-color: #ddd;
-  -moz-border-start: none;
+  border-inline-start: none;
   border-inline-start: none;
   border-radius: 0 2px 2px 0;
 }

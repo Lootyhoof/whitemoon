@@ -18,8 +18,8 @@ prefwindow {
 prefwindow[type="child"] {
   padding-top: 18px;
   padding-bottom: 15px;
-  -moz-padding-start: 18px;
-  -moz-padding-end: 20px;
+  padding-inline-start: 18px;
+  padding-inline-end: 20px;
 }
 
 /* ::::: alert icons :::::*/
@@ -31,7 +31,7 @@ prefwindow[type="child"] {
   width: 48px;
   height: 48px;
   margin: 6px;
-  -moz-margin-end: 20px;
+  margin-inline-end: 20px;
 }
 
 .alert-dialog #info\.icon {
@@ -45,7 +45,7 @@ statusbar {
   Prevents hiding of scrollbars in browser when window is made smaller.*/
   min-height: 15px !important;
   margin: 0px !important;
-  /* need to use -moz-padding-end when/if bug 631729 gets fixed: */
+  /* need to use padding-inline-end when/if bug 631729 gets fixed: */
   padding: 0px 16px 1px 1px;
   -moz-appearance: statusbar;
   text-shadow: rgba(255, 255, 255, 0.4) 0 1px;

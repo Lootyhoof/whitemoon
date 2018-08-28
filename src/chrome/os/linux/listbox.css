@@ -59,12 +59,12 @@ listheader[sortable="true"]:hover:active {
   -moz-border-left-colors: ThreeDShadow -moz-Dialog;
   padding-top: 0px;
   padding-bottom: 0px;
-  -moz-padding-start: 3px;
-  -moz-padding-end: 1px;
+  padding-inline-start: 3px;
+  padding-inline-end: 1px;
 }
 
 .listheader-icon[sortable="true"]:hover:active {
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 /* ..... sort direction icon ..... */
@@ -77,5 +77,5 @@ listheader[sortable="true"]:hover:active {
 
 .listcell-label {
   margin: 0px !important;
-  -moz-padding-end: 0px;
+  padding-inline-end: 0px;
 }

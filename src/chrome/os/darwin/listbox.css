@@ -13,7 +13,7 @@ listbox {
 .listcell-label {
   margin: 0px !important;
   padding-bottom: 1px;
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
   white-space: nowrap;
 }
 
@@ -41,8 +41,8 @@ listheader[sortable="true"]:hover:active {
   -moz-border-bottom-colors: ThreeDShadow;
   -moz-border-left-colors: ThreeDShadow -moz-Dialog;
   padding-top: 1px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 /* ::::: listcell checkbox ::::: */

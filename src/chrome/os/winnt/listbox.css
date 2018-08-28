@@ -57,8 +57,8 @@ listheader[sortable="true"]:hover:active {
   -moz-border-left-colors: ThreeDShadow -moz-Dialog;
   padding-top: 1px;
   padding-bottom: 0px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 /* ..... sort direction icon ..... */
@@ -87,7 +87,7 @@ listheader[sortable="true"]:hover:active {
 
 .listcell-label {
   padding-top: 0px;
-  -moz-padding-end: 0px;
+  padding-inline-end: 0px;
 }
 
 @media (-moz-windows-default-theme) {
@@ -109,8 +109,8 @@ listheader[sortable="true"]:hover:active {
 
 
     color: -moz-FieldText;
-    -moz-margin-start: 1px;
-    -moz-margin-end: 1px;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
     padding-top: 1px;
     padding-bottom: 1px;
     border-width: 1px;
