@@ -212,9 +212,17 @@ richlistitem[type="download"]:first-child {
   min-height: 18px;
 }
 
-toolbar[brighttext] #downloads-indicator-icon {
-  background: -moz-image-rect(var(--toolbarbutton-inverted-image),
-                              0, 108, 18, 90) center no-repeat;
+#downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+  filter: url("chrome://browser/skin/filters.svg#fill");
+  fill: currentColor;
+}
+
+toolbar:-moz-lwtheme-brighttext #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
+}
+
+toolbar:-moz-lwtheme-darktext #downloads-indicator:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {

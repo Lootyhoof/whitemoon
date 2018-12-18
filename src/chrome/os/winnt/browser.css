@@ -702,6 +702,13 @@ toolbarbutton.bookmark-item[open="true"] {
     border-right-style: none !important;
   }
   
+  #toolbar-menubar:not(:-moz-lwtheme) > .toolbarbutton-1,
+  #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) > .toolbarbutton-1,
+  #navigator-toolbox[tabsontop=false] > #nav-bar:not(:-moz-lwtheme) > .toolbarbutton-1,
+  #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) > .toolbarbutton-1 {
+    color: inherit;
+  }
+  
   #main-menubar > menu:not(:-moz-lwtheme) {
     color: inherit;
   }

@@ -90,10 +90,16 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
 
 #status4evar-download-button #status4evar-download-icon {
 	background: -moz-image-rect(var(--toolbarbutton-image), 0, 108, 18, 90) center no-repeat;
+  filter: url("chrome://browser/skin/filters.svg#fill");
+  fill: currentColor;
 }
 
-toolbar[brighttext] #status4evar-download-button #status4evar-download-icon {
-	background: -moz-image-rect(var(--toolbarbutton-inverted-image), 0, 108, 18, 90) center no-repeat;
+toolbar:-moz-lwtheme-brighttext #status4evar-download-button #status4evar-download-icon {
+	filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
+}
+
+toolbar:-moz-lwtheme-darktext #status4evar-download-button #status4evar-download-icon {
+	filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon {
