@@ -408,13 +408,13 @@ menuitem.bookmark-item {
   opacity: .4;
 }
 
-toolbar:-moz-lwtheme-brighttext :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #status4evar-download-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not([disabled=true]) .toolbarbutton-icon,
+toolbar:-moz-lwtheme-brighttext :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #status4evar-download-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not([disabled=true]) .toolbarbutton-icon,
 toolbar:-moz-lwtheme-brighttext .toolbarbutton-1:not([disabled=true]) > .toolbarbutton-menu-dropmarker,
 toolbar:-moz-lwtheme-brighttext .toolbarbutton-1:not([disabled=true]) > .toolbarbutton-menubutton-dropmarker {
   filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
 }
 
-toolbar:-moz-lwtheme-darktext :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #status4evar-download-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not([disabled=true]) .toolbarbutton-icon,
+toolbar:-moz-lwtheme-darktext :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #status4evar-download-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not([disabled=true]) .toolbarbutton-icon,
 toolbar:-moz-lwtheme-darktext .toolbarbutton-1:not([disabled=true]) > .toolbarbutton-menu-dropmarker,
 toolbar:-moz-lwtheme-darktext .toolbarbutton-1:not([disabled=true]) > .toolbarbutton-menubutton-dropmarker {
   filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
