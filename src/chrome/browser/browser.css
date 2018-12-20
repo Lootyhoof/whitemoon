@@ -646,8 +646,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url("chrome://browser/skin/toolbar/forward.svg") !important;
 }
 
-.unified-nav-back:hover > .menu-iconic-left > .menu-iconic-icon,
-.unified-nav-forward:hover > .menu-iconic-left > .menu-iconic-icon {
+.unified-nav-back > .menu-iconic-left,
+.unified-nav-forward > .menu-iconic-left {
   filter: url("chrome://browser/skin/filters.svg#fill");
   fill: currentColor;
 }
