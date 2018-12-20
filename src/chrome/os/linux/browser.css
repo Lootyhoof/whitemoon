@@ -13,16 +13,10 @@
   padding: 3px 5px 3px 3px !important;
   list-style-image: url("chrome://browser/skin/toolbar/menu.svg");
   -moz-image-region: auto;
-  filter: url("chrome://browser/skin/filters.svg#fill");
-  fill: currentColor;
 }
 
-toolbar:-moz-lwtheme-brighttext #appmenu-toolbar-button {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
-}
-
-toolbar:-moz-lwtheme-darktext #appmenu-toolbar-button {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
+toolbar[brighttext] #appmenu-toolbar-button {
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg#brighttext");
 }
 
 #appmenu-toolbar-button > label,
@@ -78,14 +72,8 @@ toolbarbutton.bookmark-item[open="true"] {
   background-position: center;
   background-repeat: no-repeat;
   width: 30px;
-  filter: url("chrome://browser/skin/filters.svg#fill");
-  fill: currentColor;
 }
 
-#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="true"] ~ #TabsToolbar:-moz-lwtheme-brighttext::before {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
-}
-
-#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="true"] ~ #TabsToolbar:-moz-lwtheme-darktext::before {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="true"] ~ #TabsToolbar[brighttext]::before {
+  background-image: url("chrome://browser/skin/toolbar/private.svg#brighttext");
 }

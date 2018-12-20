@@ -127,14 +127,8 @@ toolbarbutton.bookmark-item > menupopup {
   background-position: center;
   background-repeat: no-repeat;
   width: 30px;
-  filter: url("chrome://browser/skin/filters.svg#fill");
-  fill: currentColor;
 }
 
-#main-window[privatebrowsingmode=temporary] #TabsToolbar:-moz-lwtheme-brighttext::before {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
-}
-
-#main-window[privatebrowsingmode=temporary] #TabsToolbar:-moz-lwtheme-darktext::before {
-  filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px white);
+#main-window[privatebrowsingmode=temporary] #TabsToolbar[brighttext]::before {
+  background-image: url("chrome://browser/skin/toolbar/private.svg#brighttext");
 }
