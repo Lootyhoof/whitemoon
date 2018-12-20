@@ -1627,7 +1627,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding-right: 2px;
   border-right: 2px solid transparent;
   background-origin: border-box;
-  color: inherit;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up[disabled],
@@ -1694,8 +1693,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   display: none;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
-.tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon,
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down,
 .tabs-newtab-button > .toolbarbutton-icon,
 #new-tab-button > .toolbarbutton-icon,
 #alltabs-button > .toolbarbutton-icon {
@@ -1703,16 +1702,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   fill: currentColor;
 }
 
-#TabsToolbar:-moz-lwtheme-brighttext .tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
-#TabsToolbar:-moz-lwtheme-brighttext .tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon,
+#TabsToolbar:-moz-lwtheme-brighttext .tabbrowser-arrowscrollbox > .scrollbutton-up,
+#TabsToolbar:-moz-lwtheme-brighttext .tabbrowser-arrowscrollbox > .scrollbutton-down,
 #TabsToolbar:-moz-lwtheme-brighttext .tabs-newtab-button > .toolbarbutton-icon,
 #TabsToolbar:-moz-lwtheme-brighttext #new-tab-button > .toolbarbutton-icon,
 toolbar:-moz-lwtheme-brighttext #alltabs-button > .toolbarbutton-icon {
   filter: url("chrome://browser/skin/filters.svg#fill") drop-shadow(1px 1px 1px black);
 }
 
-#TabsToolbar:-moz-lwtheme-darktext .tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
-#TabsToolbar:-moz-lwtheme-darktext .tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon,
+#TabsToolbar:-moz-lwtheme-darktext .tabbrowser-arrowscrollbox > .scrollbutton-up,
+#TabsToolbar:-moz-lwtheme-darktext .tabbrowser-arrowscrollbox > .scrollbutton-down,
 #TabsToolbar:-moz-lwtheme-darktext .tabs-newtab-button > .toolbarbutton-icon,
 #TabsToolbar:-moz-lwtheme-darktext #new-tab-button > .toolbarbutton-icon,
 toolbar:-moz-lwtheme-darktext #alltabs-button > .toolbarbutton-icon {
