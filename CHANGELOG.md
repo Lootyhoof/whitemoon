@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.4.0
+- update Reader View styling to reflect changes in Pale Moon 28.6.0+
+- macOS: improve tab audio indicator visibility
+
 ### 3.3.0
 - add tab audio indicators for Pale Moon 28.3.0+
 - update in-browser developer tools
