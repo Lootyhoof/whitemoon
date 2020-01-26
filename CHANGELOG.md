@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.4.1
+- small version bump for Pale Moon 29.0 compatibility (no code changes)
+
 ### 3.4.0
 - update Reader View styling to reflect changes in Pale Moon 28.6.0+
 - macOS: improve tab audio indicator visibility
