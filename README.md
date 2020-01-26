@@ -1,5 +1,5 @@
 # White Moon
-![Preview](http://i67.tinypic.com/jh4gba.png)
+![Preview](https://i.imgur.com/0nXfFs3.png)
 
 Fork of the theme [Simple White](https://github.com/louischan/simplewhite) by Louis Chan for Pale Moon with elements ported from [Simple White X](https://github.com/johngraciliano/simplewhite).
 
