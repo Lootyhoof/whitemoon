@@ -81,6 +81,7 @@
 
 /* Blend the topmost toolbar with the titlebar */
 #main-window[tabsontop=false] #nav-bar:not(:-moz-lwtheme),
+#main-window[tabsontop=false] #PersonalToolbar[collapsed=true] ~ #TabsToolbar:not(:-moz-lwtheme),
 #main-window[tabsontop=true] #TabsToolbar:not(:-moz-lwtheme) {
   -moz-appearance: toolbar;
 }
