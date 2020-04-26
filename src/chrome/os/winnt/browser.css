@@ -73,6 +73,64 @@
   list-style-image: url(chrome://browser/skin/toolbarbutton-dropdown-arrow.svg#brighttext);
 }
 
+#appmenu-popup {
+  -moz-appearance: none;
+  background: white;
+  border: 1px solid ThreeDShadow;
+}
+#appmenuPrimaryPane {
+  background-color: rgba(255,255,255,0.5);
+  padding: 2px;
+  border-inline-end: none;
+}
+#appmenuSecondaryPane {
+  background-color: #f7f7f7;
+  box-shadow: 1px 0 2px rgb(204,204,204) inset;
+  padding-inline-start: 3px;
+  padding-inline-end: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+#appmenuSecondaryPane:-moz-locale-dir(rtl) {
+  box-shadow: -1px 0 2px rgb(204,204,204) inset;
+}
+
+#appmenuPrimaryPane menupopup {
+  -moz-appearance: none;
+  background-image: linear-gradient(to right, white 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, white 28px);
+  border: 3px solid;
+  -moz-border-top-colors: ThreeDShadow white;
+  -moz-border-bottom-colors: ThreeDShadow white;
+  -moz-border-left-colors: ThreeDShadow white;
+  -moz-border-right-colors: ThreeDShadow white;
+}
+
+#appmenuSecondaryPane menupopup {
+  -moz-appearance: none;
+  background-image: linear-gradient(to right, #f7f7f7 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, #f7f7f7 28px);
+  border: 3px solid;
+  -moz-border-top-colors: ThreeDShadow #f7f7f7;
+  -moz-border-bottom-colors: ThreeDShadow #f7f7f7;
+  -moz-border-left-colors: ThreeDShadow #f7f7f7;
+  -moz-border-right-colors: ThreeDShadow #f7f7f7;
+}
+
+#appmenuPrimaryPane menupopup:-moz-locale-dir(rtl) {
+  background-image: linear-gradient(to left, white 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, white 28px);
+}
+#appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
+  background-image: linear-gradient(to left, #f7f7f7 26px, ThreeDLightShadow 26px,
+                                         ThreeDLightShadow 27px, ThreeDHighlight 27px,
+                                         ThreeDHighlight 28px, #f7f7f7 28px);
+}
+
 /* ::::: titlebar ::::: */
 
 #main-window[sizemode="normal"] > #titlebar {
