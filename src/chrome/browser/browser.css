@@ -23,6 +23,7 @@
   --toolbarbutton-background-color: transparent;
   --toolbarbutton-border-color: transparent;
   --toolbarbutton-box-shadow: none;
+  --toolbarbutton-color: #000000;
   --toolbarbutton-active-background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1));
   --toolbarbutton-active-background-color: hsla(0,0%,0%,.1);
   --toolbarbutton-active-border-color: hsla(0,0%,0%,.2) hsla(0,0%,0%,.24) hsla(0,0%,0%,.22);
@@ -85,6 +86,7 @@
   -moz-appearance: none;
   border-style: none;
   background-color: rgba(250,250,250,1);
+  color: var(--toolbarbutton-color);
 }
 
 @media not all and (-moz-windows-compositor) {
@@ -1278,6 +1280,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background: var(--tab-background);
   background-origin: border-box;
   background-repeat: no-repeat;
+  color: var(--toolbarbutton-color);
   /* top margin of 0 is important for Fitts' Law in ToT/FS */
   margin: 0;
   padding: 3px 3px 4px 1px;

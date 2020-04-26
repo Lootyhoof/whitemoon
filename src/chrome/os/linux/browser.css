@@ -1,3 +1,7 @@
+:root {
+  --field-color: #ffffff;
+}
+
 #toolbar-menubar:not(:-moz-lwtheme) {
   -moz-appearance: menubar !important;
 }
@@ -5,6 +9,13 @@
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   -moz-appearance: menubar;
   color: -moz-menubartext;
+}
+
+#nav-bar:not(:-moz-lwtheme) textbox,
+#PersonalToolbar:not(:-moz-lwtheme) textbox,
+#TabsToolbar[tabsontop=false]:not(:-moz-lwtheme) textbox {
+  background-color: var(--field-color);
+  color: var(--toolbarbutton-color);
 }
 
 #appmenu-toolbar-button {
@@ -51,6 +62,7 @@ toolbarbutton.bookmark-item[open="true"] {
 /* Prevent [mode="icons"] from hiding the label */
 .bookmark-item > .toolbarbutton-text {
   display: -moz-box !important;
+  color: var(--toolbarbutton-color);
 }
 
 .bookmark-item > .toolbarbutton-menu-dropmarker {
