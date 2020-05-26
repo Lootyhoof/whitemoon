@@ -1,5 +1,12 @@
 # Changelog
 
+### 3.5.0
+- improve integration with macOS
+- support other GTK-based operating systems
+- provide platform-specific custom statusbar styling to ensure it works in all platforms
+- Windows/Linux: improve fullscreen styling
+- Linux: improve appearance on dark system themes
+
 ### 3.4.2
 - Pale Moon 29: clarify the status of Firefox extensions in the Add-ons Manager
 
