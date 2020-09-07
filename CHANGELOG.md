@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.5.1
+- fix download status icon width
+
 ### 3.5.0
 - improve integration with macOS
 - support other GTK-based operating systems
