@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.6.0
+- add mixed-mode SSL styling
+- support Pale Moon 30
+
 ### 3.5.1
 - fix download status icon width
 
