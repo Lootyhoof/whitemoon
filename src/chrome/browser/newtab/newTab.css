@@ -228,9 +228,14 @@
   -moz-box-flex: 1;
   padding: 6px 8px;
   border: 1px solid;
+  color: #1f364c;
   border-color: rgb(222, 222, 222);
   border-radius: 5px 0 0 5px;
   box-shadow: none;
+}
+
+#searchLogoContainer:not([hidden]) ~ #searchText {
+  padding-inline-start: 38px;
 }
 
 #searchText:-moz-dir(rtl) {
@@ -247,6 +252,7 @@
   padding: 0 9px;
   background-color: rgb(255, 255, 255);
   border: 1px solid;
+  color: #1f364c;
   border-color: rgb(222, 222, 222);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -264,6 +270,7 @@
 #searchText[autofocus] + #searchSubmit {
   border-color: rgb(180, 180, 180);
   background-color: rgb(234, 234, 234);
+  background-image: none;
   color: #000;
   box-shadow: none;
 }
