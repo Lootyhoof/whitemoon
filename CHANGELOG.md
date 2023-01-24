@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.7.1
+- support Pale Moon 32
+
 ### 3.7.0
 - initial HTML date/time picker support
 - improve about:newtab search bar
