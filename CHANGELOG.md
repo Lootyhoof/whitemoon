@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.7.2
+- support Pale Moon 33
+
 ### 3.7.1
 - support Pale Moon 32
 
