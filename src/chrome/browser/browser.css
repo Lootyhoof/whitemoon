@@ -683,8 +683,7 @@ toolbar[brighttext] #tabview-button {
   list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
 }
 
-@media (-moz-os-version: windows-vista),
-	   (-moz-os-version: windows-win7) {
+@media (-moz-os-version: windows-win7) {
   :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
   :-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #tabview-button:-moz-system-metric(windows-compositor):not(:-moz-lwtheme) {
 	list-style-image: url(chrome://browser/skin/tabview/tabview-inverted.png);
@@ -1219,7 +1218,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background-image: linear-gradient(to top, var(--toolbar-border) 1px, rgba(0,0,0,.05) 1px, transparent 50%);
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   #TabsToolbar:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=false] {
     background-image: linear-gradient(to top, var(--toolbar-border) 1px, rgba(0,0,0,0) 1px, transparent);
